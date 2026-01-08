@@ -5,6 +5,7 @@ import SocialProof from '@/components/SocialProof';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import DiscoverSection from '@/components/DiscoverSection';
+import FriendsSection from '@/components/FriendsSection';
 import SafetySection from '@/components/SafetySection';
 import ReputationSection from '@/components/ReputationSection';
 import ComingSoon from '@/components/ComingSoon';
@@ -22,6 +23,7 @@ const Index = () => {
         <Features />
         <HowItWorks />
         <DiscoverSection />
+        <FriendsSection />
         <SafetySection />
         <ReputationSection />
         <ComingSoon />
