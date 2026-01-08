@@ -35,14 +35,12 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="section-padding section-dark relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%), radial-gradient(circle at 80% 80%, hsl(var(--trust)) 0%, transparent 50%)',
-          }}
-        />
-      </div>
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          background: 'radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%), radial-gradient(circle at 80% 80%, hsl(var(--trust)) 0%, transparent 50%)',
+        }}
+      />
 
       <div className="section-container relative">
         <motion.div
@@ -50,7 +48,7 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-road-foreground mb-4">
             {t('howItWorks.title')}
@@ -60,7 +58,48 @@ const HowItWorks = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        {/* Mobile/Tablet: Vertical timeline */}
+        <div className="lg:hidden relative">
+          {/* Vertical line */}
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-road-foreground/20" />
+          
+          <div className="space-y-8">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="relative pl-16"
+              >
+                {/* Step circle on the line */}
+                <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-road flex items-center justify-center border-2 border-accent z-10">
+                  <step.icon size={20} className="text-accent" />
+                </div>
+                
+                {/* Content */}
+                <div className="bg-road-foreground/5 rounded-xl p-5 border border-road-foreground/10">
+                  <span className="text-accent font-display font-bold text-sm mb-1 block">
+                    Paso {step.number}
+                  </span>
+                  <h3 className="font-display text-lg font-semibold text-road-foreground mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-road-foreground/60 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: Horizontal layout */}
+        <div className="hidden lg:grid lg:grid-cols-4 gap-6 relative">
+          {/* Horizontal connector line */}
+          <div className="absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-road-foreground/20 z-0" />
+          
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -68,33 +107,24 @@ const HowItWorks = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="relative"
+              className="relative text-center"
             >
-              {/* Connector line (hidden on mobile) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-road-foreground/20 -translate-x-1/2 z-0" />
-              )}
-
-              <div className="relative z-10 text-center lg:text-left">
-                <div className="flex flex-col items-center lg:items-start">
-                  {/* Step number */}
-                  <span className="text-accent font-display font-bold text-5xl opacity-30 mb-2">
-                    {step.number}
-                  </span>
-                  
-                  {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-road-foreground/10 flex items-center justify-center mb-4 border border-road-foreground/20">
-                    <step.icon size={28} className="text-accent" />
-                  </div>
-
-                  <h3 className="font-display text-xl font-semibold text-road-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-road-foreground/60 text-sm leading-relaxed">
-                    {step.description}
-                  </p>
+              {/* Step number badge */}
+              <div className="relative z-10 mb-6">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-road-foreground/10 flex items-center justify-center border border-road-foreground/20">
+                  <step.icon size={28} className="text-accent" />
                 </div>
               </div>
+
+              <span className="text-accent font-display font-bold text-4xl opacity-20 block mb-2">
+                {step.number}
+              </span>
+              <h3 className="font-display text-xl font-semibold text-road-foreground mb-2">
+                {step.title}
+              </h3>
+              <p className="text-road-foreground/60 text-sm leading-relaxed">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>

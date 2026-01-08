@@ -30,16 +30,16 @@ const ComingSoon = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent mb-6">
-            <Sparkles size={16} />
-            <span className="text-sm font-medium">{t('comingSoon.title')}</span>
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-accent/20 text-accent mb-4 sm:mb-6">
+            <Sparkles size={14} className="sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm font-medium">{t('comingSoon.title')}</span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-road-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-road-foreground mb-4">
             {t('comingSoon.subtitle')}
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-8 mb-10">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6 sm:mt-8 mb-8 sm:mb-10">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.key}
@@ -47,10 +47,10 @@ const ComingSoon = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-center gap-3 px-5 py-3 rounded-xl bg-road-foreground/10 border border-road-foreground/20"
+                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-road-foreground/10 border border-road-foreground/20"
               >
-                <feature.icon size={18} className="text-accent" />
-                <span className="text-road-foreground font-medium">
+                <feature.icon size={14} className="sm:w-[18px] sm:h-[18px] text-accent" />
+                <span className="text-road-foreground font-medium text-xs sm:text-base">
                   {t(`comingSoon.features.${feature.key}`)}
                 </span>
               </motion.div>
@@ -59,9 +59,9 @@ const ComingSoon = () => {
 
           <Button 
             size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 h-14 text-base"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base"
           >
-            <Bell size={18} className="mr-2" />
+            <Bell size={16} className="sm:w-[18px] sm:h-[18px] mr-2" />
             {t('comingSoon.cta')}
           </Button>
         </motion.div>

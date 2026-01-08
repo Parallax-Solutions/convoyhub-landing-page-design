@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-road">
+    <section className="relative min-h-screen flex items-center pt-16 lg:pt-20 overflow-hidden bg-road">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 -z-10"
@@ -25,47 +25,48 @@ const Hero = () => {
         }}
       />
 
-      <div className="section-container py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="section-container py-8 sm:py-12 lg:py-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="text-center lg:text-left order-2 lg:order-1"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-accent/20 text-accent mb-4 sm:mb-6"
             >
-              <MapPin size={16} />
-              <span className="text-sm font-medium">Beta abierta pronto</span>
+              <MapPin size={14} className="sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm font-medium">Beta abierta pronto</span>
             </motion.div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
               {t('hero.headline')}
             </h1>
 
-            <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-xl">
+            <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
               {t('hero.subheadline')}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 h-14 text-base shadow-lg hover:shadow-xl transition-all"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
                 <a href="#cta">
                   {t('hero.ctaPrimary')}
-                  <ArrowRight className="ml-2" size={20} />
+                  <ArrowRight className="ml-2" size={18} />
                 </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white/40 text-white hover:bg-white/10 font-semibold px-8 h-14 text-base"
+                className="border-white/40 text-white hover:bg-white/10 font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base"
                 asChild
               >
                 <a href="#discover">
@@ -77,10 +78,10 @@ const Hero = () => {
 
           {/* Phone Mockup */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+            className="flex justify-center order-1 lg:order-2"
           >
             <PhoneMockup />
           </motion.div>

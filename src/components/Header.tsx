@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-road/95 backdrop-blur-md border-b border-white/10">
       <div className="section-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -25,7 +25,7 @@ const Header = () => {
             <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
               <span className="text-accent-foreground font-bold text-lg">C</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">ConvoyHub</span>
+            <span className="font-display font-bold text-xl text-white">ConvoyHub</span>
           </a>
 
           {/* Desktop Nav */}
@@ -34,7 +34,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="link-underline text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="link-underline text-sm font-medium text-white/70 hover:text-white transition-colors"
               >
                 {link.label}
               </a>
@@ -44,7 +44,7 @@ const Header = () => {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <Button variant="ghost" size="sm" asChild>
+            <Button variant="ghost" size="sm" className="text-white/70 hover:text-white hover:bg-white/10" asChild>
               <a href="#discover">{t('nav.viewRides')}</a>
             </Button>
             <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
@@ -54,7 +54,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,13 +64,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border/50 animate-fade-in">
+          <div className="lg:hidden py-4 border-t border-white/10 animate-fade-in">
             <nav className="flex flex-col gap-4 mb-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base font-medium text-white/70 hover:text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -79,7 +79,7 @@ const Header = () => {
             </nav>
             <div className="flex flex-col gap-3">
               <LanguageSwitcher />
-              <Button variant="outline" asChild>
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                 <a href="#discover" onClick={() => setIsMenuOpen(false)}>{t('nav.viewRides')}</a>
               </Button>
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
