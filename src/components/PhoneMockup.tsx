@@ -10,7 +10,7 @@ const PhoneMockup = () => {
   ];
 
   return (
-    <div className="w-[260px] sm:w-[300px] lg:w-[320px]">
+    <div className="w-[240px] sm:w-[300px] lg:w-[320px]">
       {/* Phone Frame */}
       <div className="bg-primary rounded-[2.5rem] p-2 shadow-2xl">
         <div className="bg-card rounded-[2rem] overflow-hidden">

@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen flex items-center pt-16 lg:pt-20 overflow-hidden bg-road">
+    <section className="relative min-h-[100svh] flex items-center pt-14 sm:pt-16 lg:pt-20 overflow-hidden bg-road">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 -z-10"
@@ -25,7 +25,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="section-container py-8 sm:py-12 lg:py-24">
+      <div className="section-container py-6 sm:py-12 lg:py-24">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
@@ -44,7 +44,7 @@ const Hero = () => {
               <span className="text-xs sm:text-sm font-medium">Beta abierta pronto</span>
             </motion.div>
 
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+            <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
               {t('hero.headline')}
             </h1>
 
@@ -52,10 +52,10 @@ const Hero = () => {
               {t('hero.subheadline')}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 h-11 sm:h-14 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
                 <a href="#cta">
@@ -66,7 +66,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white/60 text-white bg-white/10 hover:bg-white/20 font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base"
+                className="border-white/60 text-white bg-white/10 hover:bg-white/20 font-semibold px-6 sm:px-8 h-11 sm:h-14 text-sm sm:text-base"
                 asChild
               >
                 <a href="#discover">
