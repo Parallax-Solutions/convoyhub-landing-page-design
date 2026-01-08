@@ -73,7 +73,25 @@
     "subtitle": "Map mode or Cards mode — you decide.",
     "filterHint": "Filter by date, proximity, guild, and bike compatibility.",
     "mapView": "Map View",
-    "cardView": "Cards View"
+    "cardView": "Cards View",
+    "searchPlaceholder": "Search rides...",
+    "ridesFound": "{{count}} rides found",
+    "thisWeek": "This week"
+  },
+  "friends": {
+    "title": "Your rider network",
+    "subtitle": "Connect with other riders, see who's available, and organize rides together.",
+    "appTitle": "Friends",
+    "pendingRequests": "{{count}} pending requests",
+    "mutualFriends": "mutual friends",
+    "yourFriends": "Your friends",
+    "ridesShort": "rides",
+    "findRiders": "Find nearby riders",
+    "features": {
+      "addFriends": "Add friends after riding",
+      "seeStatus": "See who's available",
+      "inviteRides": "Invite them to your rides"
+    }
   },
   "safety": {
     "title": "Your privacy is sacred",

@@ -73,7 +73,25 @@
     "subtitle": "Modo Mapa o modo Cards — tú decides.",
     "filterHint": "Filtra por fecha, cercanía, hermandad y compatibilidad con tu moto.",
     "mapView": "Vista Mapa",
-    "cardView": "Vista Cards"
+    "cardView": "Vista Cards",
+    "searchPlaceholder": "Buscar rodadas...",
+    "ridesFound": "{{count}} rodadas encontradas",
+    "thisWeek": "Esta semana"
+  },
+  "friends": {
+    "title": "Tu red de riders",
+    "subtitle": "Conecta con otros motociclistas, ve quién está disponible y organiza rodadas juntos.",
+    "appTitle": "Amigos",
+    "pendingRequests": "{{count}} solicitudes pendientes",
+    "mutualFriends": "amigos en común",
+    "yourFriends": "Tus amigos",
+    "ridesShort": "rodadas",
+    "findRiders": "Encuentra riders cercanos",
+    "features": {
+      "addFriends": "Agrega amigos después de rodar",
+      "seeStatus": "Ve quién está disponible",
+      "inviteRides": "Invítalos a tus rodadas"
+    }
   },
   "safety": {
     "title": "Tu privacidad es sagrada",
