@@ -76,7 +76,9 @@
     "cardView": "Cards View",
     "searchPlaceholder": "Search rides...",
     "ridesFound": "{{count}} rides found",
-    "thisWeek": "This week"
+    "thisWeek": "This week",
+    "nextRides": "Upcoming rides",
+    "seeAll": "See all"
   },
   "friends": {
     "title": "Your rider network",
