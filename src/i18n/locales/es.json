@@ -76,7 +76,9 @@
     "cardView": "Vista Cards",
     "searchPlaceholder": "Buscar rodadas...",
     "ridesFound": "{{count}} rodadas encontradas",
-    "thisWeek": "Esta semana"
+    "thisWeek": "Esta semana",
+    "nextRides": "Próximas rodadas",
+    "seeAll": "Ver todas"
   },
   "friends": {
     "title": "Tu red de riders",
