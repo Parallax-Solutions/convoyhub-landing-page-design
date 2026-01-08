@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-road/98 backdrop-blur-lg shadow-lg' : 'bg-road/95 backdrop-blur-md'
+        isScrolled ? 'bg-road/95 backdrop-blur-xl shadow-lg' : 'bg-road/80 backdrop-blur-md'
       } border-b border-white/10`}>
         <div className="section-container">
           <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
@@ -60,7 +60,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="link-underline text-sm font-medium text-white/70 hover:text-white transition-colors"
+                  className="link-underline text-sm font-medium text-white/90 hover:text-white transition-colors"
                 >
                   {link.label}
                 </a>
@@ -70,7 +70,7 @@ const Header = () => {
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-4">
               <LanguageSwitcher />
-              <Button variant="ghost" size="sm" className="text-white/70 hover:text-white hover:bg-white/10" asChild>
+              <Button variant="ghost" size="sm" className="text-white/90 hover:text-white hover:bg-white/10" asChild>
                 <a href="#discover">{t('nav.viewRides')}</a>
               </Button>
               <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
