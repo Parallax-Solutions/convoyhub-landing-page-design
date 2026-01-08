@@ -1,15 +1,22 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Map, LayoutGrid, Filter, Users, Clock, Navigation, Search } from 'lucide-react';
+import { Users, Clock, MapPin, ChevronLeft, Share2, Heart, Calendar, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const DiscoverSection = () => {
   const { t } = useTranslation();
 
-  const mockRides = [
-    { title: 'Ruta del Café', distance: '127 km', riders: 12, time: 'Dom 9:00 AM' },
-    { title: 'Costa Pacífica', distance: '180 km', riders: 18, time: 'Sáb 6:30 AM' },
-    { title: 'Mirador Andino', distance: '65 km', riders: 6, time: 'Dom 8:00 AM' },
+  const rideParticipants = [
+    { name: 'Carlos M.', avatar: 'CM' },
+    { name: 'Ana G.', avatar: 'AG' },
+    { name: 'Luis R.', avatar: 'LR' },
+  ];
+
+  const stops = [
+    { name: 'Punto de encuentro', time: '9:00 AM', type: 'start' },
+    { name: 'Parada 1 - Mirador', time: '10:30 AM', type: 'stop' },
+    { name: 'Parada 2 - Café', time: '12:00 PM', type: 'stop' },
+    { name: 'Destino final', time: '2:00 PM', type: 'end' },
   ];
 
   return (
@@ -33,7 +40,7 @@ const DiscoverSection = () => {
           </p>
         </motion.div>
 
-        {/* Mobile App Frame */}
+        {/* Mobile App Frame - Route Detail */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,45 +62,37 @@ const DiscoverSection = () => {
                   </div>
                 </div>
 
-                {/* App Header */}
-                <div className="px-4 py-3 border-b border-border">
-                  <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2">
-                    <Search size={16} className="text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">{t('discover.searchPlaceholder')}</span>
+                {/* App Header - Route Detail */}
+                <div className="px-4 py-3 border-b border-border flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
+                      <ChevronLeft size={18} className="text-foreground" />
+                    </div>
+                    <span className="font-semibold text-foreground">Ruta del Café</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
+                      <Share2 size={16} className="text-muted-foreground" />
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
+                      <Heart size={16} className="text-muted-foreground" />
+                    </div>
                   </div>
                 </div>
 
-                {/* View Toggle */}
-                <div className="flex items-center justify-between px-4 py-2 border-b border-border">
-                  <div className="flex items-center gap-1 bg-secondary rounded-lg p-1">
-                    <Button variant="secondary" size="sm" className="h-7 px-3 gap-1.5 text-xs bg-card shadow-sm">
-                      <Map size={12} />
-                      {t('discover.mapView')}
-                    </Button>
-                    <Button variant="ghost" size="sm" className="h-7 px-3 gap-1.5 text-xs text-muted-foreground">
-                      <LayoutGrid size={12} />
-                      {t('discover.cardView')}
-                    </Button>
-                  </div>
-                  <Button variant="outline" size="sm" className="h-7 px-2 gap-1 text-xs">
-                    <Filter size={12} />
-                    Filtros
-                  </Button>
-                </div>
-
-                {/* Map Area with Route */}
-                <div className="h-56 bg-[#e8f4e8] relative overflow-hidden">
+                {/* Map with Route */}
+                <div className="h-48 bg-[#e8f4e8] relative overflow-hidden">
                   {/* Roads grid */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 224">
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 192">
                     {/* Background roads */}
-                    <path d="M0 80 L320 80" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
-                    <path d="M0 160 L320 160" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
-                    <path d="M80 0 L80 224" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
-                    <path d="M200 0 L200 224" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+                    <path d="M0 70 L320 70" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+                    <path d="M0 140 L320 140" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+                    <path d="M80 0 L80 192" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+                    <path d="M200 0 L200 192" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
                     
-                    {/* Main Route - Blue dashed line like Google Maps */}
+                    {/* Main Route - Blue line like Google Maps */}
                     <motion.path 
-                      d="M40 200 Q60 180 80 160 Q120 100 160 80 Q200 60 240 70 Q280 80 290 50"
+                      d="M40 170 Q70 150 90 120 Q120 70 160 55 Q200 40 250 50 Q290 60 300 35"
                       stroke="hsl(var(--primary))"
                       strokeWidth="5"
                       fill="none"
@@ -106,9 +105,9 @@ const DiscoverSection = () => {
                     />
                     {/* Route glow effect */}
                     <motion.path 
-                      d="M40 200 Q60 180 80 160 Q120 100 160 80 Q200 60 240 70 Q280 80 290 50"
+                      d="M40 170 Q70 150 90 120 Q120 70 160 55 Q200 40 250 50 Q290 60 300 35"
                       stroke="hsl(var(--primary))"
-                      strokeWidth="12"
+                      strokeWidth="14"
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -120,99 +119,112 @@ const DiscoverSection = () => {
                     />
                   </svg>
                   
-                  {/* Rider markers on route */}
+                  {/* Route markers */}
+                  {/* Start point */}
+                  <div className="absolute left-[32px] bottom-[14px] z-10">
+                    <div className="w-5 h-5 bg-trust rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full" />
+                    </div>
+                  </div>
+
+                  {/* Stop 1 */}
                   <motion.div 
-                    className="absolute left-[70px] top-[130px] z-10"
+                    className="absolute left-[82px] top-[95px] z-10"
                     animate={{ y: [0, -2, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   >
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                      <Users size={14} className="text-accent-foreground" />
+                    <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                      <span className="text-accent-foreground font-bold text-[10px]">1</span>
                     </div>
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-accent" />
                   </motion.div>
 
+                  {/* Stop 2 */}
                   <motion.div 
-                    className="absolute left-[150px] top-[55px] z-10"
+                    className="absolute left-[152px] top-[35px] z-10"
                     animate={{ y: [0, -2, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
                   >
-                    <div className="w-8 h-8 bg-trust rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                      <Users size={14} className="text-trust-foreground" />
+                    <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                      <span className="text-accent-foreground font-bold text-[10px]">2</span>
                     </div>
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-trust" />
                   </motion.div>
-
-                  <motion.div 
-                    className="absolute right-[45px] top-[35px] z-10"
-                    animate={{ y: [0, -2, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
-                  >
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                      <span className="text-primary-foreground font-bold text-xs">3</span>
-                    </div>
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-primary" />
-                  </motion.div>
-
-                  {/* Start point */}
-                  <div className="absolute left-[32px] bottom-[16px] z-10">
-                    <div className="w-4 h-4 bg-trust rounded-full border-2 border-white shadow-md" />
-                    <div className="absolute w-8 h-8 bg-trust/20 rounded-full -translate-x-2 -translate-y-2 animate-ping" />
-                  </div>
 
                   {/* End point flag */}
-                  <div className="absolute right-[22px] top-[28px] z-10">
-                    <div className="w-5 h-5 bg-destructive rounded-sm flex items-center justify-center border-2 border-white shadow-md">
-                      <div className="w-0.5 h-3 bg-white absolute -top-3 left-1" />
+                  <div className="absolute right-[12px] top-[20px] z-10">
+                    <div className="w-6 h-6 bg-destructive rounded-sm flex items-center justify-center border-2 border-white shadow-lg">
+                      <MapPin size={12} className="text-white" />
                     </div>
+                  </div>
+
+                  {/* Riders on route */}
+                  <motion.div 
+                    className="absolute left-[115px] top-[65px] z-20"
+                    animate={{ x: [0, 5, 0], y: [0, -3, 0] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  >
+                    <div className="flex -space-x-1">
+                      <div className="w-5 h-5 bg-primary rounded-full border border-white shadow text-[8px] text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Route Info Card */}
+                <div className="px-4 py-3 bg-card border-t border-border">
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <h3 className="font-bold text-foreground">Ruta del Café</h3>
+                      <p className="text-xs text-muted-foreground">Organizado por @RiderMaster</p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-lg font-bold text-foreground">127 km</span>
+                      <p className="text-xs text-muted-foreground">~4 horas</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} />
+                      Dom 9:00 AM
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users size={12} />
+                      12/20 confirmados
+                    </span>
+                  </div>
+
+                  {/* Participants */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="flex -space-x-2">
+                      {rideParticipants.map((p, i) => (
+                        <div key={i} className="w-7 h-7 rounded-full bg-secondary border-2 border-card flex items-center justify-center text-[10px] font-medium text-foreground">
+                          {p.avatar}
+                        </div>
+                      ))}
+                      <div className="w-7 h-7 rounded-full bg-accent border-2 border-card flex items-center justify-center text-[10px] font-bold text-accent-foreground">
+                        +9
+                      </div>
+                    </div>
+                    <span className="text-xs text-muted-foreground">asistirán</span>
+                  </div>
+
+                  {/* Stops list */}
+                  <div className="space-y-2 mb-3">
+                    {stops.map((stop, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs">
+                        <div className={`w-2 h-2 rounded-full ${stop.type === 'start' ? 'bg-trust' : stop.type === 'end' ? 'bg-destructive' : 'bg-accent'}`} />
+                        <span className="flex-1 text-foreground">{stop.name}</span>
+                        <span className="text-muted-foreground">{stop.time}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Results Header */}
-                <div className="px-4 py-2 border-t border-border bg-card flex items-center justify-between">
-                  <span className="text-sm font-semibold text-foreground">
-                    {t('discover.nextRides')}
-                  </span>
-                  <span className="text-xs text-accent font-medium cursor-pointer hover:underline">
-                    {t('discover.seeAll')}
-                  </span>
-                </div>
-
-                {/* Ride Cards - Improved design */}
-                <div className="px-4 py-3 space-y-3 bg-card">
-                  {mockRides.map((ride, index) => (
-                    <motion.div
-                      key={ride.title}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border shadow-sm"
-                    >
-                      {/* Icon */}
-                      <div className="w-11 h-11 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                        <Navigation size={20} className="text-accent-foreground" />
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between mb-1">
-                          <h4 className="font-semibold text-sm text-foreground truncate">{ride.title}</h4>
-                        </div>
-                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                          <span className="font-medium text-foreground/80">{ride.distance}</span>
-                          <span className="flex items-center gap-1">
-                            <Clock size={11} />
-                            {ride.time}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Users size={11} />
-                            {ride.riders}
-                          </span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                {/* CTA Button */}
+                <div className="px-4 pb-3 bg-card">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-11 gap-2">
+                    <Navigation size={16} />
+                    Unirme a esta rodada
+                  </Button>
                 </div>
 
                 {/* Home Indicator */}

@@ -1,144 +1,172 @@
 import { motion } from 'framer-motion';
-import { MapPin, Users, Navigation, Clock } from 'lucide-react';
+import { Map, LayoutGrid, Filter, Users, Clock, Navigation, Search, MapPin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const PhoneMockup = () => {
-  const rideCards = [
-    { 
-      title: 'Ruta Costera Sur', 
-      distance: '127 km', 
-      riders: 12, 
-      time: 'Dom 9:00 AM',
-      color: 'bg-accent'
-    },
-    { 
-      title: 'Sierra Nevada', 
-      distance: '85 km', 
-      riders: 8, 
-      time: 'Sáb 7:30 AM',
-      color: 'bg-trust'
-    },
-    { 
-      title: 'Vuelta al Valle', 
-      distance: '156 km', 
-      riders: 15, 
-      time: 'Dom 8:00 AM',
-      color: 'bg-primary'
-    },
+  const mockRides = [
+    { title: 'Ruta del Café', distance: '127 km', riders: 12, time: 'Dom 9:00 AM' },
+    { title: 'Costa Pacífica', distance: '180 km', riders: 18, time: 'Sáb 6:30 AM' },
+    { title: 'Mirador Andino', distance: '65 km', riders: 6, time: 'Dom 8:00 AM' },
   ];
 
   return (
-    <div className="phone-frame w-[240px] sm:w-[280px] lg:w-[300px]">
-      <div className="phone-screen aspect-[9/19] p-0 relative">
-        {/* Status bar */}
-        <div className="flex items-center justify-between px-3 sm:px-4 py-1.5 sm:py-2 bg-road text-road-foreground text-[10px] sm:text-xs">
-          <span>9:41</span>
-          <div className="flex gap-1">
-            <div className="w-3 sm:w-4 h-1.5 sm:h-2 bg-road-foreground/80 rounded-sm" />
-            <div className="w-3 sm:w-4 h-1.5 sm:h-2 bg-road-foreground/80 rounded-sm" />
-            <div className="w-4 sm:w-6 h-2 sm:h-3 bg-road-foreground/80 rounded-sm" />
-          </div>
-        </div>
-
-        {/* App header */}
-        <div className="bg-road px-3 sm:px-4 pb-3 sm:pb-4">
-          <div className="flex items-center justify-between mb-2 sm:mb-3">
-            <span className="text-road-foreground font-display font-bold text-base sm:text-lg">Descubrir</span>
-            <div className="flex gap-2">
-              <div className="w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-road-foreground/20 flex items-center justify-center">
-                <Navigation size={12} className="sm:w-3.5 sm:h-3.5 text-road-foreground" />
-              </div>
+    <div className="w-[260px] sm:w-[300px] lg:w-[320px]">
+      {/* Phone Frame */}
+      <div className="bg-primary rounded-[2.5rem] p-2 shadow-2xl">
+        <div className="bg-card rounded-[2rem] overflow-hidden">
+          {/* Status Bar */}
+          <div className="bg-card px-4 pt-2 pb-1 flex items-center justify-between">
+            <span className="text-[10px] text-muted-foreground">9:41</span>
+            <div className="flex items-center gap-1">
+              <div className="w-4 h-2 bg-muted-foreground/50 rounded-sm" />
+              <div className="w-4 h-2 bg-muted-foreground/50 rounded-sm" />
+              <div className="w-6 h-3 bg-trust rounded-sm" />
             </div>
           </div>
-          
-          {/* Search bar */}
-          <div className="bg-road-foreground/10 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 sm:gap-3">
-            <MapPin size={12} className="sm:w-4 sm:h-4 text-road-foreground/60" />
-            <span className="text-road-foreground/60 text-xs sm:text-sm">Buscar rodadas...</span>
-          </div>
-        </div>
 
-        {/* Map section */}
-        <div className="h-28 sm:h-36 bg-secondary relative overflow-hidden">
-          {/* Simplified map UI */}
-          <div className="absolute inset-0 opacity-40" 
-            style={{
-              background: 'repeating-linear-gradient(0deg, transparent, transparent 10px, hsl(var(--border)) 10px, hsl(var(--border)) 11px), repeating-linear-gradient(90deg, transparent, transparent 10px, hsl(var(--border)) 10px, hsl(var(--border)) 11px)'
-            }}
-          />
-          
-          {/* Map pins */}
-          <motion.div 
-            className="absolute top-6 sm:top-8 left-10 sm:left-12 w-5 sm:w-6 h-5 sm:h-6 bg-accent rounded-full flex items-center justify-center shadow-lg"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <span className="text-accent-foreground text-[10px] sm:text-xs font-bold">3</span>
-          </motion.div>
-          <motion.div 
-            className="absolute top-12 sm:top-16 right-12 sm:right-16 w-5 sm:w-6 h-5 sm:h-6 bg-trust rounded-full flex items-center justify-center shadow-lg"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-          >
-            <span className="text-trust-foreground text-[10px] sm:text-xs font-bold">2</span>
-          </motion.div>
-          <motion.div 
-            className="absolute bottom-8 sm:bottom-12 left-1/2 w-5 sm:w-6 h-5 sm:h-6 bg-primary rounded-full flex items-center justify-center shadow-lg"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-          >
-            <span className="text-primary-foreground text-[10px] sm:text-xs font-bold">5</span>
-          </motion.div>
-        </div>
-
-        {/* Ride cards */}
-        <div className="bg-background p-3 sm:p-4 space-y-2 sm:space-y-3">
-          <div className="flex items-center justify-between mb-1 sm:mb-2">
-            <span className="font-semibold text-xs sm:text-sm text-foreground">Próximas rodadas</span>
-            <span className="text-[10px] sm:text-xs text-accent font-medium">Ver todas</span>
+          {/* App Header */}
+          <div className="px-4 py-3 border-b border-border">
+            <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2">
+              <Search size={16} className="text-muted-foreground" />
+              <span className="text-sm text-muted-foreground">Buscar rodadas...</span>
+            </div>
           </div>
-          
-          {rideCards.map((ride, index) => (
-            <motion.div
-              key={ride.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.5 + index * 0.15 }}
-              className="bg-card border border-border rounded-lg sm:rounded-xl p-2 sm:p-3 flex items-center gap-2 sm:gap-3"
+
+          {/* View Toggle */}
+          <div className="flex items-center justify-between px-4 py-2 border-b border-border">
+            <div className="flex items-center gap-1 bg-secondary rounded-lg p-1">
+              <Button variant="secondary" size="sm" className="h-7 px-3 gap-1.5 text-xs bg-card shadow-sm">
+                <Map size={12} />
+                Mapa
+              </Button>
+              <Button variant="ghost" size="sm" className="h-7 px-3 gap-1.5 text-xs text-muted-foreground">
+                <LayoutGrid size={12} />
+                Cards
+              </Button>
+            </div>
+            <Button variant="outline" size="sm" className="h-7 px-2 gap-1 text-xs">
+              <Filter size={12} />
+              Filtros
+            </Button>
+          </div>
+
+          {/* Map Area */}
+          <div className="h-44 bg-[#e8f4e8] relative overflow-hidden">
+            {/* Roads grid */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 176">
+              {/* Background roads */}
+              <path d="M0 60 L320 60" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+              <path d="M0 120 L320 120" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+              <path d="M100 0 L100 176" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+              <path d="M220 0 L220 176" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
+            </svg>
+            
+            {/* Cluster pins for multiple rides */}
+            <motion.div 
+              className="absolute top-6 left-12 z-10"
+              animate={{ y: [0, -2, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
             >
-              <div className={`w-8 sm:w-10 h-8 sm:h-10 ${ride.color} rounded-md sm:rounded-lg flex items-center justify-center flex-shrink-0`}>
-                <Navigation size={12} className="sm:w-4 sm:h-4 text-white" />
+              <div className="w-9 h-9 bg-accent rounded-full flex items-center justify-center shadow-lg border-2 border-white cursor-pointer">
+                <span className="text-accent-foreground font-bold text-sm">5</span>
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-medium text-xs sm:text-sm text-foreground truncate">{ride.title}</p>
-                <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-muted-foreground mt-0.5">
-                  <span>{ride.distance}</span>
-                  <span className="flex items-center gap-0.5 sm:gap-1">
-                    <Users size={8} className="sm:w-2.5 sm:h-2.5" />
-                    {ride.riders}
-                  </span>
-                </div>
-              </div>
-              <div className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground">
-                <Clock size={10} />
-                <span>{ride.time}</span>
-              </div>
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-accent" />
             </motion.div>
-          ))}
-        </div>
 
-        {/* Bottom nav */}
-        <div className="absolute bottom-0 left-0 right-0 bg-card border-t border-border px-4 sm:px-6 py-2 sm:py-3 flex justify-around">
-          <div className="flex flex-col items-center gap-0.5 sm:gap-1">
-            <MapPin size={14} className="sm:w-[18px] sm:h-[18px] text-accent" />
-            <span className="text-[8px] sm:text-[10px] text-accent font-medium">Descubrir</span>
+            <motion.div 
+              className="absolute top-14 right-16 z-10"
+              animate={{ y: [0, -2, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
+            >
+              <div className="w-9 h-9 bg-trust rounded-full flex items-center justify-center shadow-lg border-2 border-white cursor-pointer">
+                <span className="text-trust-foreground font-bold text-sm">3</span>
+              </div>
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-trust" />
+            </motion.div>
+
+            <motion.div 
+              className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+              animate={{ y: [0, -2, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
+            >
+              <div className="w-9 h-9 bg-primary rounded-full flex items-center justify-center shadow-lg border-2 border-white cursor-pointer">
+                <span className="text-primary-foreground font-bold text-sm">8</span>
+              </div>
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-primary" />
+            </motion.div>
+
+            {/* Current location dot */}
+            <div className="absolute bottom-6 right-8">
+              <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-lg" />
+              <div className="absolute inset-0 w-6 h-6 bg-accent/20 rounded-full -translate-x-1.5 -translate-y-1.5" />
+            </div>
           </div>
-          <div className="flex flex-col items-center gap-0.5 sm:gap-1">
-            <Navigation size={14} className="sm:w-[18px] sm:h-[18px] text-muted-foreground" />
-            <span className="text-[8px] sm:text-[10px] text-muted-foreground">Mis rutas</span>
+
+          {/* Results Header */}
+          <div className="px-4 py-2 border-t border-border bg-card flex items-center justify-between">
+            <span className="text-sm font-semibold text-foreground">
+              Próximas rodadas
+            </span>
+            <span className="text-xs text-accent font-medium cursor-pointer hover:underline">
+              Ver todas
+            </span>
           </div>
-          <div className="flex flex-col items-center gap-0.5 sm:gap-1">
-            <Users size={14} className="sm:w-[18px] sm:h-[18px] text-muted-foreground" />
-            <span className="text-[8px] sm:text-[10px] text-muted-foreground">Hermandad</span>
+
+          {/* Ride Cards */}
+          <div className="px-4 py-3 space-y-2.5 bg-card">
+            {mockRides.map((ride, index) => (
+              <motion.div
+                key={ride.title}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
+                className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border shadow-sm"
+              >
+                {/* Icon */}
+                <div className="w-11 h-11 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <Navigation size={20} className="text-accent-foreground" />
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-sm text-foreground truncate">{ride.title}</h4>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                    <span className="font-medium text-foreground/80">{ride.distance}</span>
+                    <span className="flex items-center gap-1">
+                      <Clock size={11} />
+                      {ride.time}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users size={11} />
+                      {ride.riders}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom Navigation */}
+          <div className="border-t border-border bg-card px-6 py-3 flex justify-around">
+            <div className="flex flex-col items-center gap-1">
+              <MapPin size={18} className="text-accent" />
+              <span className="text-[10px] text-accent font-medium">Descubrir</span>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <Navigation size={18} className="text-muted-foreground" />
+              <span className="text-[10px] text-muted-foreground">Mis rutas</span>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <Users size={18} className="text-muted-foreground" />
+              <span className="text-[10px] text-muted-foreground">Amigos</span>
+            </div>
+          </div>
+
+          {/* Home Indicator */}
+          <div className="h-6 flex items-end justify-center pb-1 bg-card">
+            <div className="w-24 h-1 bg-muted-foreground/30 rounded-full" />
           </div>
         </div>
       </div>
