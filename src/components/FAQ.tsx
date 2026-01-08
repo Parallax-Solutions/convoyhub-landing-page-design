@@ -13,6 +13,8 @@ const FAQ = () => {
   const faqKeys = [
     'googleMaps',
     'location',
+    'addFriends',
+    'friendsLocation',
     'multipleMotos',
     'publicPrivate',
     'guilds',

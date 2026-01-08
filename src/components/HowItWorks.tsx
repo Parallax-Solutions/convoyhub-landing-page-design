@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, Settings, Share2, Radio } from 'lucide-react';
+import { MapPin, Settings, Users, Radio } from 'lucide-react';
 
 const HowItWorks = () => {
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ const HowItWorks = () => {
     },
     {
       number: '03',
-      icon: Share2,
+      icon: Users,
       title: t('howItWorks.step3.title'),
       description: t('howItWorks.step3.description'),
     },
