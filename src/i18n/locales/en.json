@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "safety": "Safety",
+    "communities": "Guilds",
+    "faq": "FAQ",
+    "joinWaitlist": "Join waitlist",
+    "viewRides": "View rides"
+  },
+  "hero": {
+    "headline": "Organize rides with real group control.",
+    "subheadline": "ConvoyHub enhances WhatsApp and Instagram with clear routes, shareable pages, and a live map so no one gets left behind.",
+    "ctaPrimary": "Create a ride",
+    "ctaSecondary": "Explore rides"
+  },
+  "socialProof": {
+    "routes": "Routes with stops",
+    "rides": "Public & private rides",
+    "convoy": "Convoy control",
+    "reputation": "Verified reputation"
+  },
+  "features": {
+    "title": "Everything you need to ride in groups",
+    "subtitle": "Tools designed by and for riders who understand the importance of an organized group.",
+    "riderProfile": {
+      "title": "Rider Profile + Multiple bikes",
+      "description": "Add multiple bikes and select the active one to validate compatibility with each ride."
+    },
+    "guilds": {
+      "title": "Guilds (Hermandades)",
+      "description": "Communities with roles (Founder/Officer/Member) and exclusive internal rides."
+    },
+    "routes": {
+      "title": "Reusable routes",
+      "description": "Define meeting point, stops, and circuit with interactive map. No navigation in-app."
+    },
+    "rides": {
+      "title": "Rides (Events)",
+      "description": "Date/time, limited spots, RSVP, check-in, and clear rules for each outing."
+    },
+    "discover": {
+      "title": "Discover rides",
+      "description": "Explore public rides and your guilds' rides with map and custom filters."
+    },
+    "liveMap": {
+      "title": "Live convoy map",
+      "description": "Organizer-only by default: detect stragglers, stopped riders, and offline members in real-time."
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "From idea to route in minutes. No hassle.",
+    "step1": {
+      "title": "Create a route",
+      "description": "Define meeting point and stops on the interactive map."
+    },
+    "step2": {
+      "title": "Schedule the ride",
+      "description": "Set capacity, rules, and visibility (public or guild)."
+    },
+    "step3": {
+      "title": "Share the link",
+      "description": "Send via WhatsApp, Instagram, or any social network."
+    },
+    "step4": {
+      "title": "Convoy control",
+      "description": "Live map during the ride + 'Open in Google Maps' for navigation."
+    }
+  },
+  "discover": {
+    "title": "Discover your next adventure",
+    "subtitle": "Map mode or Cards mode — you decide.",
+    "filterHint": "Filter by date, proximity, guild, and bike compatibility.",
+    "mapView": "Map View",
+    "cardView": "Cards View"
+  },
+  "safety": {
+    "title": "Your privacy is sacred",
+    "subtitle": "Designed so you have full control of your location.",
+    "items": {
+      "notNavigation": "The live map is NOT navigation — use Google Maps for directions.",
+      "consent": "Location shared only during the event and with your consent.",
+      "organizerOnly": "By default, only the organizer sees the group's locations.",
+      "autoOff": "Auto-off when finished + 'Stop sharing' button always visible.",
+      "noTracking": "No tracking outside active rides. Ever."
+    }
+  },
+  "reputation": {
+    "title": "Trust built by riding together",
+    "subtitle": "Verified recommendations: only if you shared a ride.",
+    "verified": "Verified",
+    "signals": {
+      "attendance": "Confirmed attendance",
+      "punctuality": "Punctuality (check-in)",
+      "reviews": "Post-ride reviews"
+    },
+    "description": "Real signals based on shared rides. No empty likes or bought followers."
+  },
+  "comingSoon": {
+    "title": "Coming soon",
+    "subtitle": "Paid rides for tours and guides",
+    "features": {
+      "pricing": "Customizable pricing and capacity",
+      "cancellation": "Clear cancellation policy",
+      "history": "Verified organizer history"
+    },
+    "cta": "Get notified"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "googleMaps": {
+        "question": "Does ConvoyHub replace Google Maps?",
+        "answer": "No. ConvoyHub is for planning and coordinating. When you need directions, a button opens Google Maps directly."
+      },
+      "location": {
+        "question": "Who can see my location?",
+        "answer": "By default, only the ride organizer. You can disable location sharing at any time."
+      },
+      "multipleMotos": {
+        "question": "Can I have multiple bikes?",
+        "answer": "Yes. Add as many as you want and select the active one for each ride. This helps validate compatibility."
+      },
+      "publicPrivate": {
+        "question": "Are there public and private rides?",
+        "answer": "Yes. Rides can be public (anyone can see), guild-only (members only), or by direct invitation."
+      },
+      "guilds": {
+        "question": "How do guilds work?",
+        "answer": "They're communities with roles: Founder, Officer, and Member. Each guild has its own rides and routes."
+      },
+      "noSignal": {
+        "question": "What happens if I lose signal?",
+        "answer": "The organizer will see you're 'offline'. When you regain signal, your location updates automatically."
+      },
+      "paidRides": {
+        "question": "When will paid rides be available?",
+        "answer": "Coming soon. We're preparing rides with registration for organized tours and professional guides."
+      },
+      "fakeReputation": {
+        "question": "How is fake reputation prevented?",
+        "answer": "You can only recommend or rate someone if you actually shared a ride. No exceptions."
+      }
+    }
+  },
+  "autonomy": {
+    "title": "Design autonomy",
+    "description": "This landing was designed with full creative freedom by Lovable, the design assistant. It was given autonomy to choose typography, spacing, components, visual direction, and interactions — always respecting the product message and the rider community's needs.",
+    "note": "This freedom is intentional: we believe the best experiences are born when design can breathe."
+  },
+  "finalCta": {
+    "headline": "Ready to ride together, without losing anyone.",
+    "placeholder": "your@email.com",
+    "button": "Join the waitlist",
+    "secondary": "Create a guild"
+  },
+  "footer": {
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "disclaimer": "ConvoyHub does not provide turn-by-turn navigation; use Google Maps for directions."
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "features": "Funcionalidades",
+    "howItWorks": "Cómo funciona",
+    "safety": "Seguridad",
+    "communities": "Hermandades",
+    "faq": "FAQ",
+    "joinWaitlist": "Únete a la lista",
+    "viewRides": "Ver rodadas"
+  },
+  "hero": {
+    "headline": "Organiza rodadas con control real del grupo.",
+    "subheadline": "ConvoyHub potencia WhatsApp e Instagram con rutas claras, páginas compartibles y un mapa en vivo para que nadie se quede atrás.",
+    "ctaPrimary": "Crear una rodada",
+    "ctaSecondary": "Explorar rodadas"
+  },
+  "socialProof": {
+    "routes": "Rutas con paradas",
+    "rides": "Rodadas públicas y privadas",
+    "convoy": "Control del convoy",
+    "reputation": "Reputación verificada"
+  },
+  "features": {
+    "title": "Todo lo que necesitas para rodar en grupo",
+    "subtitle": "Herramientas diseñadas por y para riders que entienden la importancia de un grupo organizado.",
+    "riderProfile": {
+      "title": "Perfil Rider + Múltiples motos",
+      "description": "Agrega varias motos y selecciona la activa para validar compatibilidad con cada rodada."
+    },
+    "guilds": {
+      "title": "Hermandades (Guilds)",
+      "description": "Comunidades con roles (Fundador/Oficial/Miembro) y rodadas internas exclusivas."
+    },
+    "routes": {
+      "title": "Rutas reutilizables",
+      "description": "Define punto de reunión, paradas y circuito con mapa interactivo. Sin navegación dentro del app."
+    },
+    "rides": {
+      "title": "Rodadas (Eventos)",
+      "description": "Fecha/hora, cupos limitados, RSVP, check-in y reglas claras para cada salida."
+    },
+    "discover": {
+      "title": "Descubrir rodadas",
+      "description": "Explora rodadas públicas y de tus hermandades con mapa y filtros personalizados."
+    },
+    "liveMap": {
+      "title": "Mapa en vivo del convoy",
+      "description": "Solo organizador por defecto: detecta rezagados, detenidos y riders offline en tiempo real."
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "De la idea a la ruta en minutos. Sin complicaciones.",
+    "step1": {
+      "title": "Crea una ruta",
+      "description": "Define punto de reunión y paradas en el mapa interactivo."
+    },
+    "step2": {
+      "title": "Programa la rodada",
+      "description": "Establece cupo, reglas y visibilidad (pública o hermandad)."
+    },
+    "step3": {
+      "title": "Comparte el link",
+      "description": "Envía por WhatsApp, Instagram o cualquier red social."
+    },
+    "step4": {
+      "title": "Control de convoy",
+      "description": "Mapa en vivo durante la rodada + 'Abrir en Google Maps' para navegar."
+    }
+  },
+  "discover": {
+    "title": "Descubre tu próxima aventura",
+    "subtitle": "Modo Mapa o modo Cards — tú decides.",
+    "filterHint": "Filtra por fecha, cercanía, hermandad y compatibilidad con tu moto.",
+    "mapView": "Vista Mapa",
+    "cardView": "Vista Cards"
+  },
+  "safety": {
+    "title": "Tu privacidad es sagrada",
+    "subtitle": "Diseñado para que tengas el control total de tu ubicación.",
+    "items": {
+      "notNavigation": "El mapa en vivo NO es navegación — usa Google Maps para direcciones.",
+      "consent": "Ubicación compartida solo durante el evento y con tu consentimiento.",
+      "organizerOnly": "Por defecto, solo el organizador ve las ubicaciones del grupo.",
+      "autoOff": "Auto-off al finalizar + botón 'Dejar de compartir' siempre visible.",
+      "noTracking": "Sin rastreo fuera de rodadas activas. Nunca."
+    }
+  },
+  "reputation": {
+    "title": "Confianza que se construye rodando",
+    "subtitle": "Recomendaciones verificadas: solo si compartieron una rodada.",
+    "verified": "Verificado",
+    "signals": {
+      "attendance": "Asistencia confirmada",
+      "punctuality": "Puntualidad (check-in)",
+      "reviews": "Reseñas post-rodada"
+    },
+    "description": "Señales reales basadas en rodadas compartidas. Sin likes vacíos ni seguidores comprados."
+  },
+  "comingSoon": {
+    "title": "Próximamente",
+    "subtitle": "Rodadas con inscripción para tours y guías",
+    "features": {
+      "pricing": "Precio y cupos personalizables",
+      "cancellation": "Política de cancelación clara",
+      "history": "Historial verificado del organizador"
+    },
+    "cta": "Ser notificado"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": {
+      "googleMaps": {
+        "question": "¿ConvoyHub reemplaza Google Maps?",
+        "answer": "No. ConvoyHub es para planificar y coordinar. Cuando necesites direcciones, un botón te abre Google Maps directamente."
+      },
+      "location": {
+        "question": "¿Quién puede ver mi ubicación?",
+        "answer": "Por defecto, solo el organizador de la rodada. Puedes desactivar el compartir ubicación en cualquier momento."
+      },
+      "multipleMotos": {
+        "question": "¿Puedo tener varias motos?",
+        "answer": "Sí. Agrega todas las que quieras y selecciona la activa para cada rodada. Esto ayuda a validar compatibilidad."
+      },
+      "publicPrivate": {
+        "question": "¿Hay rodadas públicas y privadas?",
+        "answer": "Sí. Las rodadas pueden ser públicas (cualquiera las ve), de hermandad (solo miembros) o por invitación directa."
+      },
+      "guilds": {
+        "question": "¿Cómo funcionan las hermandades?",
+        "answer": "Son comunidades con roles: Fundador, Oficial y Miembro. Cada hermandad tiene sus propias rodadas y rutas."
+      },
+      "noSignal": {
+        "question": "¿Qué pasa si me quedo sin señal?",
+        "answer": "El organizador verá que estás 'offline'. Cuando recuperes señal, tu ubicación se actualiza automáticamente."
+      },
+      "paidRides": {
+        "question": "¿Cuándo habrá rodadas pagadas?",
+        "answer": "Próximamente. Estamos preparando rodadas con inscripción para tours organizados y guías profesionales."
+      },
+      "fakeReputation": {
+        "question": "¿Cómo se evita reputación falsa?",
+        "answer": "Solo puedes recomendar o calificar a alguien si realmente compartieron una rodada. Sin excepciones."
+      }
+    }
+  },
+  "autonomy": {
+    "title": "Autonomía de diseño",
+    "description": "Esta landing fue diseñada con plena libertad creativa por Lovable, el asistente de diseño. Se le otorgó autonomía para elegir tipografía, espaciado, componentes, dirección visual e interacciones — siempre respetando el mensaje del producto y las necesidades de la comunidad rider.",
+    "note": "Esta libertad es intencional: creemos que las mejores experiencias nacen cuando el diseño puede respirar."
+  },
+  "finalCta": {
+    "headline": "Listo para rodar en comunidad, sin perder a nadie.",
+    "placeholder": "tu@email.com",
+    "button": "Unirme a la lista",
+    "secondary": "Crear una hermandad"
+  },
+  "footer": {
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "contact": "Contacto",
+    "disclaimer": "ConvoyHub no proporciona navegación paso a paso; usa Google Maps para direcciones."
+  }
+}
