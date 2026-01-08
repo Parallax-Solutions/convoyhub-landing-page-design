@@ -33,7 +33,7 @@
     },
     "routes": {
       "title": "Rutas reutilizables",
-      "description": "Define punto de reunión, paradas y circuito con mapa interactivo. Sin navegación dentro del app."
+      "description": "Define punto de reunión, paradas y circuito con mapa interactivo."
     },
     "rides": {
       "title": "Rodadas (Eventos)",
@@ -44,8 +44,8 @@
       "description": "Explora rodadas públicas y de tus hermandades con mapa y filtros personalizados."
     },
     "liveMap": {
-      "title": "Mapa en vivo del convoy",
-      "description": "Solo organizador por defecto: detecta rezagados, detenidos y riders offline en tiempo real."
+      "title": "Mapa en vivo del evento",
+      "description": "Visible para todos los participantes. El organizador tiene Torre de control con herramientas avanzadas."
     }
   },
   "howItWorks": {
@@ -64,8 +64,8 @@
       "description": "Comparte el link o invita directamente desde tu lista de amigos."
     },
     "step4": {
-      "title": "Control de convoy",
-      "description": "Mapa en vivo durante la rodada + 'Abrir en Google Maps' para navegar."
+      "title": "Mapa para todos",
+      "description": "Todos ven el mapa del evento. El organizador tiene herramientas de coordinación extra."
     }
   },
   "discover": {
@@ -115,7 +115,7 @@
       },
       "seeOnMap": {
         "title": "Ver amigos en el mapa",
-        "description": "Ubicación aproximada, no exacta. Solo si ellos lo permiten, solo durante rodadas."
+        "description": "Ubicación aproximada (no exacta) de tus amigos, siempre con su permiso."
       },
       "myGroup": {
         "title": "Mi grupo en rodada",
@@ -129,13 +129,50 @@
       "inviteRides": "Invítalos a tus rodadas"
     }
   },
+  "mapComparison": {
+    "title": "Vista participante vs Torre de control",
+    "subtitle": "Todos ven el mapa del evento. El organizador tiene herramientas extra para coordinar.",
+    "participant": {
+      "title": "Participante",
+      "subtitle": "Todos los riders",
+      "features": {
+        "route": "Ver ruta completa y paradas",
+        "riders": "Ver riders en mapa con agrupación/pelotones",
+        "status": "Ver estados: en ruta / detenido / sin señal",
+        "center": "Botones: 'Centrarme' y 'Centrar en grupo'",
+        "actions": "Acciones: 'Pedir ayuda' / 'Reportar incidente'"
+      }
+    },
+    "organizer": {
+      "title": "Torre de control",
+      "subtitle": "Organizador / Admin",
+      "features": {
+        "panel": "Panel con lista de 'En riesgo'",
+        "alerts": "Alertas de rezagados / detenidos / offline",
+        "thresholds": "Ajustar umbrales del evento",
+        "broadcast": "Enviar avisos: 'Reagrupar', 'Pausa/Espera'",
+        "roles": "Asignar roles: líder, sweep, marshals",
+        "resolve": "Marcar alertas como resueltas y finalizar evento"
+      },
+      "comingSoon": "Próximamente"
+    }
+  },
   "safety": {
     "title": "Tu privacidad es sagrada",
     "subtitle": "Diseñado para que tengas el control total de tu ubicación.",
+    "eventMap": {
+      "title": "Mapa del evento para todos — con control",
+      "items": {
+        "everyone": "Todos ven el mapa del evento para mantenerse ubicados.",
+        "organizer": "El organizador ve funciones avanzadas para coordinar y cuidar al grupo.",
+        "consent": "La ubicación se comparte solo durante el evento y con consentimiento.",
+        "autoOff": "Se apaga automáticamente al finalizar + botón 'Dejar de compartir'."
+      }
+    },
     "items": {
-      "notNavigation": "El mapa en vivo NO es navegación — usa Google Maps para direcciones.",
       "consent": "Ubicación compartida solo durante el evento y con tu consentimiento.",
-      "organizerOnly": "Por defecto, solo el organizador ve las ubicaciones del grupo.",
+      "everyone": "Todos los participantes ven el mapa para mantenerse ubicados.",
+      "organizerExtra": "El organizador tiene vista avanzada (Torre de control) con herramientas extra.",
       "autoOff": "Auto-off al finalizar + botón 'Dejar de compartir' siempre visible.",
       "noTracking": "Sin rastreo fuera de rodadas activas. Nunca."
     }
@@ -168,9 +205,13 @@
         "question": "¿ConvoyHub reemplaza Google Maps?",
         "answer": "No. ConvoyHub es para planificar y coordinar. Cuando necesites direcciones, un botón te abre Google Maps directamente."
       },
-      "location": {
-        "question": "¿Quién puede ver mi ubicación?",
-        "answer": "Por defecto, solo el organizador de la rodada. Puedes desactivar el compartir ubicación en cualquier momento."
+      "whoSeesMap": {
+        "question": "¿Quién puede ver el mapa en vivo del evento?",
+        "answer": "Todos los participantes pueden ver el mapa del evento con la ruta, paradas y ubicación de los riders. El organizador tiene una vista avanzada llamada 'Torre de control' con herramientas extra para coordinar al grupo."
+      },
+      "privacy": {
+        "question": "¿Cómo se protege la privacidad?",
+        "answer": "Tu ubicación solo se comparte durante el evento y con tu consentimiento explícito. Se apaga automáticamente al finalizar y siempre tienes un botón visible para 'Dejar de compartir'. Fuera de rodadas activas, no hay rastreo. Nunca."
       },
       "multipleMotos": {
         "question": "¿Puedo tener varias motos?",
@@ -186,7 +227,7 @@
       },
       "noSignal": {
         "question": "¿Qué pasa si me quedo sin señal?",
-        "answer": "El organizador verá que estás 'offline'. Cuando recuperes señal, tu ubicación se actualiza automáticamente."
+        "answer": "Los demás verán que estás 'offline' con tu última ubicación conocida. Cuando recuperes señal, tu ubicación se actualiza automáticamente."
       },
       "paidRides": {
         "question": "¿Cuándo habrá rodadas pagadas?",
@@ -202,7 +243,7 @@
       },
       "friendsLocation": {
         "question": "¿Mis amigos pueden ver mi ubicación?",
-        "answer": "No por defecto. El mapa en vivo solo lo ve el organizador. Si en el futuro habilitamos visibilidad entre amigos, será 100% opt-in y solo durante rodadas activas."
+        "answer": "Solo si tú lo permites. Puedes compartir tu ubicación aproximada (no exacta) con amigos que tú elijas. Esta función es opcional y siempre controlada por ti."
       }
     }
   },
@@ -220,7 +261,6 @@
   "footer": {
     "terms": "Términos",
     "privacy": "Privacidad",
-    "contact": "Contacto",
-    "disclaimer": "ConvoyHub no proporciona navegación paso a paso; usa Google Maps para direcciones."
+    "contact": "Contacto"
   }
 }

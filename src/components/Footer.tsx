@@ -15,17 +15,14 @@ const Footer = () => {
     <footer className="bg-road border-t border-road-foreground/10">
       <div className="section-container py-8 sm:py-12">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
-          {/* Logo & disclaimer */}
+          {/* Logo */}
           <div className="text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start gap-2 mb-3 sm:mb-4">
+            <div className="flex items-center justify-center lg:justify-start gap-2">
               <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-lg bg-accent flex items-center justify-center">
                 <span className="text-accent-foreground font-bold text-base sm:text-lg">C</span>
               </div>
               <span className="font-display font-bold text-lg sm:text-xl text-road-foreground">ConvoyHub</span>
             </div>
-            <p className="text-xs sm:text-sm text-road-foreground/50 max-w-sm">
-              {t('footer.disclaimer')}
-            </p>
           </div>
 
           {/* Links */}
