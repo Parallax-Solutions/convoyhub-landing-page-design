@@ -186,12 +186,21 @@ const DiscoverSection = () => {
                       </div>
                     </div>
 
-                    {/* Friends going badge */}
-                    <div className="bg-accent/10 rounded-lg px-3 py-2 mb-3 flex items-center gap-2">
-                      <Users size={14} className="text-accent" />
-                      <span className="text-xs font-medium text-accent">
-                        Van Ricardo + 3 amigos
-                      </span>
+                    {/* Badges row */}
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {/* Friends going badge */}
+                      <div className="bg-accent/10 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5">
+                        <Users size={12} className="text-accent" />
+                        <span className="text-[10px] font-medium text-accent">
+                          Van Ricardo + 3
+                        </span>
+                      </div>
+                      {/* Compatible badge */}
+                      <div className="bg-trust/10 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5">
+                        <span className="text-[10px] font-medium text-trust">
+                          ✓ {t('discover.compatibleFilter')}
+                        </span>
+                      </div>
                     </div>
 
                     <div className="flex items-center gap-4 text-xs text-muted-foreground mb-2">

@@ -48,6 +48,53 @@
       "description": "Visible para todos los participantes. El organizador tiene Torre de control con herramientas avanzadas."
     }
   },
+  "riderProfile": {
+    "title": "Tu perfil Rider y tus motos",
+    "subtitle": "Agrega múltiples motos, elige tu 'moto activa' para validar compatibilidad automáticamente, y construye una reputación real basada en rodadas compartidas.",
+    "screens": {
+      "profile": "Perfil Rider",
+      "motorcycles": "Mis motos",
+      "compatibility": "Compatibilidad y alertas"
+    },
+    "ridingStyle": {
+      "chill": "Tranqui",
+      "medium": "Ritmo medio",
+      "fast": "Rápido"
+    },
+    "stats": {
+      "rides": "Rodadas",
+      "motos": "Motos",
+      "reputation": "Reputación"
+    },
+    "badges": {
+      "title": "Badges",
+      "punctual": "Puntual",
+      "organizer": "Organizador confiable",
+      "verified": "Verificado por rodadas"
+    },
+    "myMotos": "Mis motos",
+    "addMoto": "Agregar",
+    "activeMoto": "Activa",
+    "motoTip": "Tu moto activa se usa para validar requisitos de cada rodada.",
+    "rideDetails": "Detalles de la rodada",
+    "compatibility": {
+      "compatible": "Compatible con tu moto activa",
+      "notCompatible": "No compatible",
+      "yourMoto": "Tu moto",
+      "requires": "Requiere"
+    },
+    "alerts": {
+      "title": "Alertas durante la rodada",
+      "help": "Pedir ayuda",
+      "incident": "Reportar incidente",
+      "description": "Los riders pueden enviar alertas al organizador y al grupo durante la rodada."
+    },
+    "features": {
+      "multipleMotos": "Múltiples motos: guarda tu garage completo.",
+      "activeBike": "Moto activa: valida requisitos automáticamente.",
+      "realReputation": "Reputación real: solo de rodadas compartidas."
+    }
+  },
   "howItWorks": {
     "title": "Cómo funciona",
     "subtitle": "De la idea a la ruta en minutos. Sin complicaciones.",
@@ -80,7 +127,8 @@
     "nextRides": "Próximas rodadas",
     "seeAll": "Ver todas",
     "friendsFilter": "Mis amigos van",
-    "friendsGoing": "Van {{name}} + {{count}} amigos"
+    "friendsGoing": "Van {{name}} + {{count}} amigos",
+    "compatibleFilter": "Compatible con mi moto"
   },
   "friends": {
     "title": "Rodar con amigos",
@@ -214,8 +262,12 @@
         "answer": "Tu ubicación solo se comparte durante el evento y con tu consentimiento explícito. Se apaga automáticamente al finalizar y siempre tienes un botón visible para 'Dejar de compartir'. Fuera de rodadas activas, no hay rastreo. Nunca."
       },
       "multipleMotos": {
-        "question": "¿Puedo tener varias motos?",
-        "answer": "Sí. Agrega todas las que quieras y selecciona la activa para cada rodada. Esto ayuda a validar compatibilidad."
+        "question": "¿Puedo registrar más de una moto?",
+        "answer": "Sí. Agrega todas las que quieras a tu garage y selecciona la 'moto activa' para cada rodada. Esto permite validar automáticamente si cumples los requisitos de cada evento."
+      },
+      "compatibility": {
+        "question": "¿Cómo decide ConvoyHub si una rodada es compatible conmigo?",
+        "answer": "Cada rodada puede tener requisitos de cilindrada mínima, tipo de moto (ADV, Sport, Naked, etc.) o marca específica. ConvoyHub compara estos requisitos con tu moto activa y te muestra si eres compatible antes de inscribirte."
       },
       "publicPrivate": {
         "question": "¿Hay rodadas públicas y privadas?",
