@@ -60,8 +60,8 @@
       "description": "Establece cupo, reglas y visibilidad (pública o hermandad)."
     },
     "step3": {
-      "title": "Comparte el link",
-      "description": "Envía por WhatsApp, Instagram o cualquier red social."
+      "title": "Invita a tus amigos",
+      "description": "Comparte el link o invita directamente desde tu lista de amigos."
     },
     "step4": {
       "title": "Control de convoy",
@@ -78,17 +78,47 @@
     "ridesFound": "{{count}} rodadas encontradas",
     "thisWeek": "Esta semana",
     "nextRides": "Próximas rodadas",
-    "seeAll": "Ver todas"
+    "seeAll": "Ver todas",
+    "friendsFilter": "Mis amigos van",
+    "friendsGoing": "Van {{name}} + {{count}} amigos"
   },
   "friends": {
-    "title": "Tu red de riders",
-    "subtitle": "Conecta con otros motociclistas, ve quién está disponible y organiza rodadas juntos.",
+    "title": "Rodar con amigos",
+    "subtitle": "Tu red de confianza para organizar rodadas. No es otra red social — es una capa práctica para coordinar mejor.",
     "appTitle": "Amigos",
     "pendingRequests": "{{count}} solicitudes pendientes",
     "mutualFriends": "amigos en común",
     "yourFriends": "Tus amigos",
     "ridesShort": "rodadas",
     "findRiders": "Encuentra riders cercanos",
+    "addFriendsCta": "Agregar amigos",
+    "capabilities": {
+      "addFriends": {
+        "title": "Agregar amigos",
+        "description": "Envía solicitudes, acepta y crea tu red de confianza."
+      },
+      "inviteOneTouch": {
+        "title": "Invitar en 1 toque",
+        "description": "Invita rápido a tus favoritos o a tu lista completa."
+      },
+      "discoverFriends": {
+        "title": "Descubrir con amigos",
+        "description": "Filtro: 'Mis amigos van' para encontrar planes más fácil."
+      },
+      "trustSignal": {
+        "title": "Señal de confianza",
+        "description": "Muestra cuántas rodadas han compartido (señal real, no likes)."
+      },
+      "favorites": {
+        "title": "Favoritos",
+        "description": "Marca amigos frecuentes para invitarlos al instante."
+      },
+      "myGroup": {
+        "title": "Mi grupo en rodada",
+        "description": "Ver solo a tus amigos o su estado durante el evento.",
+        "comingSoon": "Próximamente"
+      }
+    },
     "features": {
       "addFriends": "Agrega amigos después de rodar",
       "seeStatus": "Ve quién está disponible",
@@ -161,6 +191,14 @@
       "fakeReputation": {
         "question": "¿Cómo se evita reputación falsa?",
         "answer": "Solo puedes recomendar o calificar a alguien si realmente compartieron una rodada. Sin excepciones."
+      },
+      "addFriends": {
+        "question": "¿Cómo agrego amigos en ConvoyHub?",
+        "answer": "Puedes enviar solicitudes de amistad desde el perfil de cualquier rider, o aceptar las que te lleguen. También puedes agregar amigos después de compartir una rodada — así construyes una red de confianza real."
+      },
+      "friendsLocation": {
+        "question": "¿Mis amigos pueden ver mi ubicación?",
+        "answer": "No por defecto. El mapa en vivo solo lo ve el organizador. Si en el futuro habilitamos visibilidad entre amigos, será 100% opt-in y solo durante rodadas activas."
       }
     }
   },

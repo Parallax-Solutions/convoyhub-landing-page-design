@@ -60,8 +60,8 @@
       "description": "Set capacity, rules, and visibility (public or guild)."
     },
     "step3": {
-      "title": "Share the link",
-      "description": "Send via WhatsApp, Instagram, or any social network."
+      "title": "Invite your friends",
+      "description": "Share the link or invite directly from your friends list."
     },
     "step4": {
       "title": "Convoy control",
@@ -78,17 +78,47 @@
     "ridesFound": "{{count}} rides found",
     "thisWeek": "This week",
     "nextRides": "Upcoming rides",
-    "seeAll": "See all"
+    "seeAll": "See all",
+    "friendsFilter": "My friends going",
+    "friendsGoing": "{{name}} + {{count}} friends going"
   },
   "friends": {
-    "title": "Your rider network",
-    "subtitle": "Connect with other riders, see who's available, and organize rides together.",
+    "title": "Ride with friends",
+    "subtitle": "Your trusted network for organizing rides. Not another social network — a practical layer for better coordination.",
     "appTitle": "Friends",
     "pendingRequests": "{{count}} pending requests",
     "mutualFriends": "mutual friends",
     "yourFriends": "Your friends",
     "ridesShort": "rides",
     "findRiders": "Find nearby riders",
+    "addFriendsCta": "Add friends",
+    "capabilities": {
+      "addFriends": {
+        "title": "Add friends",
+        "description": "Send requests, accept, and build your trust network."
+      },
+      "inviteOneTouch": {
+        "title": "Invite in 1 tap",
+        "description": "Quickly invite your favorites or your entire list."
+      },
+      "discoverFriends": {
+        "title": "Discover with friends",
+        "description": "'My friends going' filter to find plans easier."
+      },
+      "trustSignal": {
+        "title": "Trust signal",
+        "description": "Shows how many rides you've shared (real signal, not likes)."
+      },
+      "favorites": {
+        "title": "Favorites",
+        "description": "Mark frequent friends to invite them instantly."
+      },
+      "myGroup": {
+        "title": "My group during ride",
+        "description": "See only your friends or their status during the event.",
+        "comingSoon": "Coming soon"
+      }
+    },
     "features": {
       "addFriends": "Add friends after riding",
       "seeStatus": "See who's available",
@@ -161,6 +191,14 @@
       "fakeReputation": {
         "question": "How is fake reputation prevented?",
         "answer": "You can only recommend or rate someone if you actually shared a ride. No exceptions."
+      },
+      "addFriends": {
+        "question": "How do I add friends in ConvoyHub?",
+        "answer": "You can send friend requests from any rider's profile, or accept incoming ones. You can also add friends after sharing a ride — that's how you build a real trust network."
+      },
+      "friendsLocation": {
+        "question": "Can my friends see my location?",
+        "answer": "Not by default. The live map is only visible to the organizer. If we ever enable visibility between friends, it will be 100% opt-in and only during active rides."
       }
     }
   },
