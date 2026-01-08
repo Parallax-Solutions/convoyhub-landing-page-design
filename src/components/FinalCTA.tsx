@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, Loader2, CheckCircle } from 'lucide-react';
+import { ArrowRight, Loader2, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -86,14 +86,6 @@ const FinalCTA = () => {
             </form>
           )}
 
-          <Button 
-            variant="ghost" 
-            size="lg"
-            className="text-road-foreground/70 hover:text-road-foreground hover:bg-road-foreground/10 text-sm sm:text-base h-10 sm:h-12"
-          >
-            <Users size={16} className="sm:w-[18px] sm:h-[18px] mr-2" />
-            {t('finalCta.secondary')}
-          </Button>
         </motion.div>
       </div>
     </section>

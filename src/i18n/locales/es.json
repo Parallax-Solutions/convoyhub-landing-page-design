@@ -237,14 +237,15 @@
     "description": "Señales reales basadas en rodadas compartidas. Sin likes vacíos ni seguidores comprados."
   },
   "comingSoon": {
-    "title": "Próximamente",
-    "subtitle": "Rodadas con inscripción para tours y guías",
+    "title": "Rodadas gratis y de pago",
+    "subtitle": "Todas las rodadas son gratis. Próximamente: rodadas de pago para tours organizados y guías profesionales.",
     "features": {
       "pricing": "Precio y cupos personalizables",
       "cancellation": "Política de cancelación clara",
       "history": "Historial verificado del organizador"
     },
-    "cta": "Ser notificado"
+    "cta": "Ser notificado",
+    "comingSoonLabel": "Próximamente"
   },
   "faq": {
     "title": "Preguntas frecuentes",
@@ -307,8 +308,7 @@
   "finalCta": {
     "headline": "Listo para rodar en comunidad, sin perder a nadie.",
     "placeholder": "tu@email.com",
-    "button": "Unirme a la lista",
-    "secondary": "Crear una hermandad"
+    "button": "Unirme a la lista"
   },
   "footer": {
     "terms": "Términos",

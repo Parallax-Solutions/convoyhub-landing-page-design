@@ -81,25 +81,6 @@ const FriendsSection = () => {
               ))}
             </div>
 
-            {/* Micro CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.6 }}
-              className="mt-6 text-center sm:text-left"
-            >
-              <Button 
-                variant="outline" 
-                className="gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
-                asChild
-              >
-                <a href="#cta">
-                  <UserPlus size={18} />
-                  {t('friends.addFriendsCta')}
-                </a>
-              </Button>
-            </motion.div>
           </motion.div>
 
           {/* Mobile App Frame */}
