@@ -41,7 +41,7 @@ const FinalCTA = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-road-foreground mb-8">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-road-foreground mb-6 sm:mb-8">
             {t('finalCta.headline')}
           </h2>
 
@@ -49,37 +49,37 @@ const FinalCTA = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-trust/10 border border-trust/30"
+              className="flex flex-col items-center gap-4 p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-trust/10 border border-trust/30"
             >
-              <div className="w-16 h-16 rounded-full bg-trust/20 flex items-center justify-center">
-                <CheckCircle size={32} className="text-trust" />
+              <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-trust/20 flex items-center justify-center">
+                <CheckCircle size={24} className="sm:w-8 sm:h-8 text-trust" />
               </div>
-              <p className="text-lg text-road-foreground font-medium">
+              <p className="text-base sm:text-lg text-road-foreground font-medium">
                 ¡Gracias! Te notificaremos cuando esté listo.
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 mb-6">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
               <Input
                 type="email"
                 placeholder={t('finalCta.placeholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 h-14 bg-road-foreground/10 border-road-foreground/20 text-road-foreground placeholder:text-road-foreground/50 text-base px-5"
+                className="flex-1 h-12 sm:h-14 bg-road-foreground/10 border-road-foreground/20 text-road-foreground placeholder:text-road-foreground/50 text-sm sm:text-base px-4 sm:px-5"
               />
               <Button 
                 type="submit"
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 h-14 text-base"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  <Loader2 className="animate-spin" size={20} />
+                  <Loader2 className="animate-spin" size={18} />
                 ) : (
                   <>
                     {t('finalCta.button')}
-                    <ArrowRight className="ml-2" size={18} />
+                    <ArrowRight className="ml-2" size={16} />
                   </>
                 )}
               </Button>
@@ -89,9 +89,9 @@ const FinalCTA = () => {
           <Button 
             variant="ghost" 
             size="lg"
-            className="text-road-foreground/70 hover:text-road-foreground hover:bg-road-foreground/10"
+            className="text-road-foreground/70 hover:text-road-foreground hover:bg-road-foreground/10 text-sm sm:text-base h-10 sm:h-12"
           >
-            <Users size={18} className="mr-2" />
+            <Users size={16} className="sm:w-[18px] sm:h-[18px] mr-2" />
             {t('finalCta.secondary')}
           </Button>
         </motion.div>

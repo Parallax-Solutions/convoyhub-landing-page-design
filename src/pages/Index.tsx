@@ -9,7 +9,6 @@ import SafetySection from '@/components/SafetySection';
 import ReputationSection from '@/components/ReputationSection';
 import ComingSoon from '@/components/ComingSoon';
 import FAQ from '@/components/FAQ';
-import DesignAutonomy from '@/components/DesignAutonomy';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
@@ -27,7 +26,6 @@ const Index = () => {
         <ReputationSection />
         <ComingSoon />
         <FAQ />
-        <DesignAutonomy />
         <FinalCTA />
       </main>
       <Footer />

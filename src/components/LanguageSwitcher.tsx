@@ -15,12 +15,12 @@ const LanguageSwitcher = () => {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+      className="flex items-center gap-2 text-white/70 hover:text-white hover:bg-white/10"
     >
       <Globe size={16} />
       <span className="font-medium">{i18n.language === 'es' ? 'ES' : 'EN'}</span>
-      <span className="text-border">|</span>
-      <span className="text-muted-foreground/60">{i18n.language === 'es' ? 'EN' : 'ES'}</span>
+      <span className="text-white/30">|</span>
+      <span className="text-white/40">{i18n.language === 'es' ? 'EN' : 'ES'}</span>
     </Button>
   );
 };

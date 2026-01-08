@@ -13,9 +13,9 @@ const SocialProof = () => {
   ];
 
   return (
-    <section className="bg-secondary py-6 border-y border-border/50">
+    <section className="bg-secondary py-4 sm:py-6 border-y border-border/50">
       <div className="section-container">
-        <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 sm:gap-6 lg:gap-12">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.label}
@@ -23,12 +23,12 @@ const SocialProof = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center gap-3"
+              className="flex items-center gap-2 sm:gap-3"
             >
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                <benefit.icon size={18} className="text-accent" />
+              <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <benefit.icon size={14} className="sm:w-[18px] sm:h-[18px] text-accent" />
               </div>
-              <span className="font-medium text-foreground text-sm sm:text-base">{benefit.label}</span>
+              <span className="font-medium text-foreground text-xs sm:text-sm lg:text-base">{benefit.label}</span>
             </motion.div>
           ))}
         </div>

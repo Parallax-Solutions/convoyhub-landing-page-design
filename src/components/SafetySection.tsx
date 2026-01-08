@@ -24,7 +24,7 @@ const SafetySection = () => {
       />
 
       <div className="section-container relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -32,19 +32,19 @@ const SafetySection = () => {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6 }}
           >
-            <div className="trust-badge mb-6">
-              <Shield size={16} />
-              <span>Privacidad primero</span>
+            <div className="trust-badge mb-4 sm:mb-6">
+              <Shield size={14} className="sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm">Privacidad primero</span>
             </div>
 
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
               {t('safety.title')}
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               {t('safety.subtitle')}
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {safetyItems.map((item, index) => (
                 <motion.div
                   key={item.key}
@@ -52,12 +52,12 @@ const SafetySection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border"
+                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-card border border-border"
                 >
-                  <div className="w-10 h-10 rounded-full bg-trust/10 flex items-center justify-center flex-shrink-0">
-                    <item.icon size={18} className="text-trust" />
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-trust/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon size={14} className="sm:w-[18px] sm:h-[18px] text-trust" />
                   </div>
-                  <p className="text-foreground font-medium pt-2">
+                  <p className="text-sm sm:text-base text-foreground font-medium pt-1 sm:pt-2">
                     {t(`safety.items.${item.key}`)}
                   </p>
                 </motion.div>
@@ -65,13 +65,13 @@ const SafetySection = () => {
             </div>
           </motion.div>
 
-          {/* Visual */}
+          {/* Visual - Hidden on mobile for cleaner look */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center"
+            className="hidden lg:flex justify-center"
           >
             <div className="relative w-full max-w-sm">
               {/* Shield graphic */}
