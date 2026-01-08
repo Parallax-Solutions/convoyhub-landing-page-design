@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { Map, LayoutGrid, Filter, Users, Clock, Navigation, Search, MapPin } from 'lucide-react';
+import { Map, LayoutGrid, Filter, Users, Clock, Navigation, Search, MapPin, Minus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const PhoneMockup = () => {
   const mockRides = [
-    { title: 'Ruta del Café', distance: '127 km', riders: 12, time: 'Dom 9:00 AM' },
-    { title: 'Costa Pacífica', distance: '180 km', riders: 18, time: 'Sáb 6:30 AM' },
-    { title: 'Mirador Andino', distance: '65 km', riders: 6, time: 'Dom 8:00 AM' },
+    { title: 'Ruta del Café', distance: '127 km', riders: 12, time: 'Dom 9:00 AM', color: 'bg-accent', textColor: 'text-accent-foreground' },
+    { title: 'Costa Pacífica', distance: '180 km', riders: 18, time: 'Sáb 6:30 AM', color: 'bg-trust', textColor: 'text-trust-foreground' },
+    { title: 'Mirador Andino', distance: '65 km', riders: 6, time: 'Dom 8:00 AM', color: 'bg-primary', textColor: 'text-primary-foreground' },
   ];
 
   return (
@@ -61,7 +61,7 @@ const PhoneMockup = () => {
               <path d="M220 0 L220 176" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
             </svg>
             
-            {/* Cluster pins for multiple rides */}
+            {/* Cluster pins - colors match the cards below */}
             <motion.div 
               className="absolute top-6 left-12 z-10"
               animate={{ y: [0, -2, 0] }}
@@ -102,71 +102,79 @@ const PhoneMockup = () => {
             </div>
           </div>
 
-          {/* Results Header */}
-          <div className="px-4 py-2 border-t border-border bg-card flex items-center justify-between">
-            <span className="text-sm font-semibold text-foreground">
-              Próximas rodadas
-            </span>
-            <span className="text-xs text-accent font-medium cursor-pointer hover:underline">
-              Ver todas
-            </span>
-          </div>
+          {/* Bottom Sheet with drag handle */}
+          <div className="bg-card rounded-t-2xl -mt-3 relative shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+            {/* Drag Handle */}
+            <div className="flex justify-center pt-2 pb-1">
+              <div className="w-10 h-1 bg-muted-foreground/30 rounded-full" />
+            </div>
+            
+            {/* Results Header */}
+            <div className="px-4 py-2 flex items-center justify-between">
+              <span className="text-sm font-semibold text-foreground">
+                Próximas rodadas
+              </span>
+              <span className="text-xs text-accent font-medium cursor-pointer hover:underline">
+                Ver todas
+              </span>
+            </div>
 
-          {/* Ride Cards */}
-          <div className="px-4 py-3 space-y-2.5 bg-card">
-            {mockRides.map((ride, index) => (
-              <motion.div
-                key={ride.title}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-                className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border shadow-sm"
-              >
-                {/* Icon */}
-                <div className="w-11 h-11 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <Navigation size={20} className="text-accent-foreground" />
-                </div>
-                
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between mb-1">
-                    <h4 className="font-semibold text-sm text-foreground truncate">{ride.title}</h4>
+            {/* Ride Cards - icon colors match map pins */}
+            <div className="px-4 pb-3 space-y-2.5">
+              {mockRides.map((ride, index) => (
+                <motion.div
+                  key={ride.title}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
+                  className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border shadow-sm"
+                >
+                  {/* Icon - matches map pin color */}
+                  <div className={`w-11 h-11 ${ride.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                    <Navigation size={20} className={ride.textColor} />
                   </div>
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                    <span className="font-medium text-foreground/80">{ride.distance}</span>
-                    <span className="flex items-center gap-1">
-                      <Clock size={11} />
-                      {ride.time}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users size={11} />
-                      {ride.riders}
-                    </span>
+                  
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between mb-1">
+                      <h4 className="font-semibold text-sm text-foreground truncate">{ride.title}</h4>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                      <span className="font-medium text-foreground/80">{ride.distance}</span>
+                      <span className="flex items-center gap-1">
+                        <Clock size={11} />
+                        {ride.time}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Users size={11} />
+                        {ride.riders}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </div>
 
-          {/* Bottom Navigation */}
-          <div className="border-t border-border bg-card px-6 py-3 flex justify-around">
-            <div className="flex flex-col items-center gap-1">
-              <MapPin size={18} className="text-accent" />
-              <span className="text-[10px] text-accent font-medium">Descubrir</span>
+            {/* Bottom Navigation */}
+            <div className="border-t border-border px-6 py-3 flex justify-around">
+              <div className="flex flex-col items-center gap-1">
+                <MapPin size={18} className="text-accent" />
+                <span className="text-[10px] text-accent font-medium">Descubrir</span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <Navigation size={18} className="text-muted-foreground" />
+                <span className="text-[10px] text-muted-foreground">Mis rutas</span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <Users size={18} className="text-muted-foreground" />
+                <span className="text-[10px] text-muted-foreground">Amigos</span>
+              </div>
             </div>
-            <div className="flex flex-col items-center gap-1">
-              <Navigation size={18} className="text-muted-foreground" />
-              <span className="text-[10px] text-muted-foreground">Mis rutas</span>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <Users size={18} className="text-muted-foreground" />
-              <span className="text-[10px] text-muted-foreground">Amigos</span>
-            </div>
-          </div>
 
-          {/* Home Indicator */}
-          <div className="h-6 flex items-end justify-center pb-1 bg-card">
-            <div className="w-24 h-1 bg-muted-foreground/30 rounded-full" />
+            {/* Home Indicator */}
+            <div className="h-6 flex items-end justify-center pb-1">
+              <div className="w-24 h-1 bg-muted-foreground/30 rounded-full" />
+            </div>
           </div>
         </div>
       </div>

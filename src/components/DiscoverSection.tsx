@@ -168,68 +168,76 @@ const DiscoverSection = () => {
                   </motion.div>
                 </div>
 
-                {/* Route Info Card */}
-                <div className="px-4 py-3 bg-card border-t border-border">
-                  <div className="flex items-center justify-between mb-3">
-                    <div>
-                      <h3 className="font-bold text-foreground">Ruta del Café</h3>
-                      <p className="text-xs text-muted-foreground">Organizado por @RiderMaster</p>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-lg font-bold text-foreground">127 km</span>
-                      <p className="text-xs text-muted-foreground">~4 horas</p>
-                    </div>
+                {/* Bottom Sheet with drag handle */}
+                <div className="bg-card rounded-t-2xl -mt-3 relative shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+                  {/* Drag Handle */}
+                  <div className="flex justify-center pt-2 pb-1">
+                    <div className="w-10 h-1 bg-muted-foreground/30 rounded-full" />
                   </div>
 
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                    <span className="flex items-center gap-1">
-                      <Calendar size={12} />
-                      Dom 9:00 AM
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users size={12} />
-                      12/20 confirmados
-                    </span>
-                  </div>
+                  {/* Route Info Card */}
+                  <div className="px-4 py-2">
+                    <div className="flex items-center justify-between mb-3">
+                      <div>
+                        <h3 className="font-bold text-foreground">Ruta del Café</h3>
+                        <p className="text-xs text-muted-foreground">Organizado por @RiderMaster</p>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-lg font-bold text-foreground">127 km</span>
+                        <p className="text-xs text-muted-foreground">~4 horas</p>
+                      </div>
+                    </div>
 
-                  {/* Participants */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="flex -space-x-2">
-                      {rideParticipants.map((p, i) => (
-                        <div key={i} className="w-7 h-7 rounded-full bg-secondary border-2 border-card flex items-center justify-center text-[10px] font-medium text-foreground">
-                          {p.avatar}
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                      <span className="flex items-center gap-1">
+                        <Calendar size={12} />
+                        Dom 9:00 AM
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Users size={12} />
+                        12/20 confirmados
+                      </span>
+                    </div>
+
+                    {/* Participants */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="flex -space-x-2">
+                        {rideParticipants.map((p, i) => (
+                          <div key={i} className="w-7 h-7 rounded-full bg-secondary border-2 border-card flex items-center justify-center text-[10px] font-medium text-foreground">
+                            {p.avatar}
+                          </div>
+                        ))}
+                        <div className="w-7 h-7 rounded-full bg-accent border-2 border-card flex items-center justify-center text-[10px] font-bold text-accent-foreground">
+                          +9
+                        </div>
+                      </div>
+                      <span className="text-xs text-muted-foreground">asistirán</span>
+                    </div>
+
+                    {/* Stops list */}
+                    <div className="space-y-2 mb-3">
+                      {stops.map((stop, i) => (
+                        <div key={i} className="flex items-center gap-2 text-xs">
+                          <div className={`w-2 h-2 rounded-full ${stop.type === 'start' ? 'bg-trust' : stop.type === 'end' ? 'bg-destructive' : 'bg-accent'}`} />
+                          <span className="flex-1 text-foreground">{stop.name}</span>
+                          <span className="text-muted-foreground">{stop.time}</span>
                         </div>
                       ))}
-                      <div className="w-7 h-7 rounded-full bg-accent border-2 border-card flex items-center justify-center text-[10px] font-bold text-accent-foreground">
-                        +9
-                      </div>
                     </div>
-                    <span className="text-xs text-muted-foreground">asistirán</span>
                   </div>
 
-                  {/* Stops list */}
-                  <div className="space-y-2 mb-3">
-                    {stops.map((stop, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs">
-                        <div className={`w-2 h-2 rounded-full ${stop.type === 'start' ? 'bg-trust' : stop.type === 'end' ? 'bg-destructive' : 'bg-accent'}`} />
-                        <span className="flex-1 text-foreground">{stop.name}</span>
-                        <span className="text-muted-foreground">{stop.time}</span>
-                      </div>
-                    ))}
+                  {/* CTA Button */}
+                  <div className="px-4 pb-3">
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-11 gap-2">
+                      <Navigation size={16} />
+                      Unirme a esta rodada
+                    </Button>
                   </div>
-                </div>
 
-                {/* CTA Button */}
-                <div className="px-4 pb-3 bg-card">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-11 gap-2">
-                    <Navigation size={16} />
-                    Unirme a esta rodada
-                  </Button>
-                </div>
-
-                {/* Home Indicator */}
-                <div className="h-6 flex items-end justify-center pb-1 bg-card">
-                  <div className="w-24 h-1 bg-muted-foreground/30 rounded-full" />
+                  {/* Home Indicator */}
+                  <div className="h-6 flex items-end justify-center pb-1">
+                    <div className="w-24 h-1 bg-muted-foreground/30 rounded-full" />
+                  </div>
                 </div>
               </div>
             </div>
