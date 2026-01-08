@@ -113,6 +113,10 @@
         "title": "Favoritos",
         "description": "Marca amigos frecuentes para invitarlos al instante."
       },
+      "seeOnMap": {
+        "title": "Ver amigos en el mapa",
+        "description": "Ubicación aproximada, no exacta. Solo si ellos lo permiten, solo durante rodadas."
+      },
       "myGroup": {
         "title": "Mi grupo en rodada",
         "description": "Ver solo a tus amigos o su estado durante el evento.",
