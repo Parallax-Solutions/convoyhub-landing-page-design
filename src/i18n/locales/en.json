@@ -237,14 +237,15 @@
     "description": "Real signals based on shared rides. No empty likes or bought followers."
   },
   "comingSoon": {
-    "title": "Coming soon",
-    "subtitle": "Paid rides for tours and guides",
+    "title": "Free and paid rides",
+    "subtitle": "All rides are free. Coming soon: paid rides for organized tours and professional guides.",
     "features": {
       "pricing": "Customizable pricing and capacity",
       "cancellation": "Clear cancellation policy",
       "history": "Verified organizer history"
     },
-    "cta": "Get notified"
+    "cta": "Get notified",
+    "comingSoonLabel": "Coming soon"
   },
   "faq": {
     "title": "Frequently asked questions",
@@ -307,8 +308,7 @@
   "finalCta": {
     "headline": "Ready to ride together, without losing anyone.",
     "placeholder": "your@email.com",
-    "button": "Join the waitlist",
-    "secondary": "Create a guild"
+    "button": "Join the waitlist"
   },
   "footer": {
     "terms": "Terms",

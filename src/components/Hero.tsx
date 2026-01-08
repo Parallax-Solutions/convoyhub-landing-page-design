@@ -66,7 +66,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white/40 text-white hover:bg-white/10 font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base"
+                className="border-white/60 text-white bg-white/10 hover:bg-white/20 font-semibold px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base"
                 asChild
               >
                 <a href="#discover">

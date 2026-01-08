@@ -30,14 +30,18 @@ const ComingSoon = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto"
         >
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-road-foreground mb-4">
+            {t('comingSoon.title')}
+          </h2>
+
+          <p className="text-base sm:text-lg text-road-foreground/70 mb-6">
+            {t('comingSoon.subtitle')}
+          </p>
+
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-accent/20 text-accent mb-4 sm:mb-6">
             <Sparkles size={14} className="sm:w-4 sm:h-4" />
-            <span className="text-xs sm:text-sm font-medium">{t('comingSoon.title')}</span>
+            <span className="text-xs sm:text-sm font-medium">{t('comingSoon.comingSoonLabel')}</span>
           </div>
-
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-road-foreground mb-4">
-            {t('comingSoon.subtitle')}
-          </h2>
 
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6 sm:mt-8 mb-8 sm:mb-10">
             {features.map((feature, index) => (
