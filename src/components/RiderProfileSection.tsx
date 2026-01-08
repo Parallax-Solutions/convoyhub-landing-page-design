@@ -42,7 +42,7 @@ const RiderProfileSection = () => {
         </motion.div>
 
         {/* Phone Mockups Grid */}
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-10 sm:mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
           
           {/* Phone 1: Rider Profile */}
           <motion.div
@@ -52,8 +52,8 @@ const RiderProfileSection = () => {
             transition={{ duration: 0.5 }}
             className="flex justify-center"
           >
-            <div className="w-full max-w-[260px]">
-              <p className="text-sm font-medium text-center text-muted-foreground mb-3">
+            <div className="w-full max-w-[220px] sm:max-w-[240px]">
+              <p className="text-xs sm:text-sm font-medium text-center text-muted-foreground mb-2 sm:mb-3">
                 {t('riderProfile.screens.profile')}
               </p>
               <div className="bg-primary rounded-[2rem] p-1.5 shadow-xl">
@@ -144,8 +144,8 @@ const RiderProfileSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex justify-center"
           >
-            <div className="w-full max-w-[260px]">
-              <p className="text-sm font-medium text-center text-muted-foreground mb-3">
+            <div className="w-full max-w-[220px] sm:max-w-[240px]">
+              <p className="text-xs sm:text-sm font-medium text-center text-muted-foreground mb-2 sm:mb-3">
                 {t('riderProfile.screens.motorcycles')}
               </p>
               <div className="bg-primary rounded-[2rem] p-1.5 shadow-xl">
@@ -224,10 +224,10 @@ const RiderProfileSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center"
+            className="flex justify-center sm:col-span-2 lg:col-span-1"
           >
-            <div className="w-full max-w-[260px]">
-              <p className="text-sm font-medium text-center text-muted-foreground mb-3">
+            <div className="w-full max-w-[220px] sm:max-w-[240px]">
+              <p className="text-xs sm:text-sm font-medium text-center text-muted-foreground mb-2 sm:mb-3">
                 {t('riderProfile.screens.compatibility')}
               </p>
               <div className="bg-primary rounded-[2rem] p-1.5 shadow-xl">

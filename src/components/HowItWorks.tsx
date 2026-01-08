@@ -48,12 +48,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 lg:mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-road-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-5xl font-bold text-road-foreground mb-3 sm:mb-4">
             {t('howItWorks.title')}
           </h2>
-          <p className="text-lg text-road-foreground/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-road-foreground/70 max-w-2xl mx-auto px-2">
             {t('howItWorks.subtitle')}
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-road-foreground/20" />
           
-          <div className="space-y-8">
+          <div className="space-y-6">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}

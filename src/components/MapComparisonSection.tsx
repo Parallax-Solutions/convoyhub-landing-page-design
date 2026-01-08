@@ -44,21 +44,21 @@ const MapComparisonSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
           {/* Participant View */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5 }}
-            className="bg-card border border-border rounded-2xl p-6 sm:p-8"
+            className="bg-card border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                <Eye size={24} className="text-accent" />
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center">
+                <Eye size={20} className="sm:w-6 sm:h-6 text-accent" />
               </div>
               <div>
-                <h3 className="font-display text-xl font-bold text-foreground">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
                   {t('mapComparison.participant.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -67,7 +67,7 @@ const MapComparisonSection = () => {
               </div>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {participantFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.key}
@@ -160,7 +160,7 @@ const MapComparisonSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-card border-2 border-primary/30 rounded-2xl p-6 sm:p-8 relative"
+            className="bg-card border-2 border-primary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 relative"
           >
             <div className="absolute -top-3 right-4">
               <span className="text-[10px] bg-primary text-primary-foreground px-3 py-1 rounded-full font-medium">
@@ -168,12 +168,12 @@ const MapComparisonSection = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                <Shield size={24} className="text-primary" />
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center">
+                <Shield size={20} className="sm:w-6 sm:h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-display text-xl font-bold text-foreground">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
                   {t('mapComparison.organizer.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -182,7 +182,7 @@ const MapComparisonSection = () => {
               </div>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {organizerFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.key}
