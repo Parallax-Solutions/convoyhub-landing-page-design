@@ -10,10 +10,10 @@ const PhoneMockup = () => {
   ];
 
   return (
-    <div className="w-[240px] sm:w-[300px] lg:w-[320px]">
+    <div className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px] mx-auto">
       {/* Phone Frame */}
-      <div className="bg-primary rounded-[2.5rem] p-2 shadow-2xl">
-        <div className="bg-card rounded-[2rem] overflow-hidden">
+      <div className="bg-primary rounded-[2.5rem] p-2 shadow-2xl aspect-[9/19]">
+        <div className="bg-card rounded-[2rem] overflow-hidden h-full flex flex-col">
           {/* Status Bar */}
           <div className="bg-card px-4 pt-2 pb-1 flex items-center justify-between">
             <span className="text-[10px] text-muted-foreground">9:41</span>
@@ -54,7 +54,7 @@ const PhoneMockup = () => {
           </div>
 
           {/* Map Area */}
-          <div className="h-40 bg-[#e8f4e8] relative overflow-hidden">
+          <div className="flex-1 min-h-0 bg-[#e8f4e8] relative overflow-hidden">
             {/* Roads grid */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 160">
               <path d="M0 55 L320 55" stroke="hsl(var(--border))" strokeWidth="3" fill="none" opacity="0.5" />
@@ -105,7 +105,7 @@ const PhoneMockup = () => {
           </div>
 
           {/* Bottom Sheet */}
-          <div className="bg-card rounded-t-2xl -mt-3 relative shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+          <div className="bg-card rounded-t-2xl -mt-3 relative shadow-[0_-4px_20px_rgba(0,0,0,0.1)] flex-shrink-0">
             <div className="flex justify-center pt-2 pb-1">
               <div className="w-10 h-1 bg-muted-foreground/30 rounded-full" />
             </div>
