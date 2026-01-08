@@ -6,6 +6,7 @@ import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import DiscoverSection from '@/components/DiscoverSection';
 import FriendsSection from '@/components/FriendsSection';
+import MapComparisonSection from '@/components/MapComparisonSection';
 import SafetySection from '@/components/SafetySection';
 import ReputationSection from '@/components/ReputationSection';
 import ComingSoon from '@/components/ComingSoon';
@@ -24,6 +25,7 @@ const Index = () => {
         <HowItWorks />
         <DiscoverSection />
         <FriendsSection />
+        <MapComparisonSection />
         <SafetySection />
         <ReputationSection />
         <ComingSoon />

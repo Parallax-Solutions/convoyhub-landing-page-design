@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Check, Shield, Eye, Power, MapPinOff } from 'lucide-react';
+import { Check, Shield, Eye, Power, Users, Map } from 'lucide-react';
 
 const SafetySection = () => {
   const { t } = useTranslation();
 
   const safetyItems = [
-    { icon: MapPinOff, key: 'notNavigation' },
     { icon: Check, key: 'consent' },
-    { icon: Eye, key: 'organizerOnly' },
+    { icon: Users, key: 'everyone' },
+    { icon: Eye, key: 'organizerExtra' },
     { icon: Power, key: 'autoOff' },
     { icon: Shield, key: 'noTracking' },
   ];
@@ -95,7 +95,7 @@ const SafetySection = () => {
                       <Check size={14} className="text-trust" />
                     </div>
                     <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 rounded-full bg-card border border-trust/30 flex items-center justify-center shadow-lg">
-                      <Eye size={14} className="text-trust" />
+                      <Users size={14} className="text-trust" />
                     </div>
                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-card border border-trust/30 flex items-center justify-center shadow-lg">
                       <Power size={14} className="text-trust" />

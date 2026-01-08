@@ -33,7 +33,7 @@
     },
     "routes": {
       "title": "Reusable routes",
-      "description": "Define meeting point, stops, and circuit with interactive map. No navigation in-app."
+      "description": "Define meeting point, stops, and circuit with interactive map."
     },
     "rides": {
       "title": "Rides (Events)",
@@ -44,8 +44,8 @@
       "description": "Explore public rides and your guilds' rides with map and custom filters."
     },
     "liveMap": {
-      "title": "Live convoy map",
-      "description": "Organizer-only by default: detect stragglers, stopped riders, and offline members in real-time."
+      "title": "Live event map",
+      "description": "Visible to all participants. The organizer has Control Tower with advanced tools."
     }
   },
   "howItWorks": {
@@ -64,8 +64,8 @@
       "description": "Share the link or invite directly from your friends list."
     },
     "step4": {
-      "title": "Convoy control",
-      "description": "Live map during the ride + 'Open in Google Maps' for navigation."
+      "title": "Map for everyone",
+      "description": "Everyone sees the event map. The organizer has extra coordination tools."
     }
   },
   "discover": {
@@ -115,7 +115,7 @@
       },
       "seeOnMap": {
         "title": "See friends on map",
-        "description": "Approximate location, not exact. Only if they allow it, only during rides."
+        "description": "Approximate location (not exact) of your friends, always with their permission."
       },
       "myGroup": {
         "title": "My group during ride",
@@ -129,13 +129,50 @@
       "inviteRides": "Invite them to your rides"
     }
   },
+  "mapComparison": {
+    "title": "Participant view vs Control Tower",
+    "subtitle": "Everyone sees the event map. The organizer has extra tools to coordinate.",
+    "participant": {
+      "title": "Participant",
+      "subtitle": "All riders",
+      "features": {
+        "route": "See full route and stops",
+        "riders": "See riders on map with clusters/groups",
+        "status": "See status: on route / stopped / no signal",
+        "center": "Buttons: 'Center on me' and 'Center on group'",
+        "actions": "Actions: 'Request help' / 'Report incident'"
+      }
+    },
+    "organizer": {
+      "title": "Control Tower",
+      "subtitle": "Organizer / Admin",
+      "features": {
+        "panel": "Panel with 'At risk' list",
+        "alerts": "Alerts for stragglers / stopped / offline",
+        "thresholds": "Adjust event thresholds",
+        "broadcast": "Send alerts: 'Regroup', 'Pause/Wait'",
+        "roles": "Assign roles: leader, sweep, marshals",
+        "resolve": "Mark alerts as resolved and end event"
+      },
+      "comingSoon": "Coming soon"
+    }
+  },
   "safety": {
     "title": "Your privacy is sacred",
     "subtitle": "Designed so you have full control of your location.",
+    "eventMap": {
+      "title": "Event map for everyone — with control",
+      "items": {
+        "everyone": "Everyone sees the event map to stay oriented.",
+        "organizer": "The organizer sees advanced features to coordinate and care for the group.",
+        "consent": "Location is shared only during the event and with consent.",
+        "autoOff": "Auto-off when finished + 'Stop sharing' button always visible."
+      }
+    },
     "items": {
-      "notNavigation": "The live map is NOT navigation — use Google Maps for directions.",
       "consent": "Location shared only during the event and with your consent.",
-      "organizerOnly": "By default, only the organizer sees the group's locations.",
+      "everyone": "All participants see the map to stay oriented.",
+      "organizerExtra": "The organizer has an advanced view (Control Tower) with extra tools.",
       "autoOff": "Auto-off when finished + 'Stop sharing' button always visible.",
       "noTracking": "No tracking outside active rides. Ever."
     }
@@ -168,9 +205,13 @@
         "question": "Does ConvoyHub replace Google Maps?",
         "answer": "No. ConvoyHub is for planning and coordinating. When you need directions, a button opens Google Maps directly."
       },
-      "location": {
-        "question": "Who can see my location?",
-        "answer": "By default, only the ride organizer. You can disable location sharing at any time."
+      "whoSeesMap": {
+        "question": "Who can see the live event map?",
+        "answer": "All participants can see the event map with the route, stops, and rider locations. The organizer has an advanced view called 'Control Tower' with extra tools to coordinate the group."
+      },
+      "privacy": {
+        "question": "How is privacy protected?",
+        "answer": "Your location is only shared during the event and with your explicit consent. It auto-turns off when finished and you always have a visible 'Stop sharing' button. Outside active rides, there's no tracking. Ever."
       },
       "multipleMotos": {
         "question": "Can I have multiple bikes?",
@@ -186,7 +227,7 @@
       },
       "noSignal": {
         "question": "What happens if I lose signal?",
-        "answer": "The organizer will see you're 'offline'. When you regain signal, your location updates automatically."
+        "answer": "Others will see you're 'offline' with your last known location. When you regain signal, your location updates automatically."
       },
       "paidRides": {
         "question": "When will paid rides be available?",
@@ -202,7 +243,7 @@
       },
       "friendsLocation": {
         "question": "Can my friends see my location?",
-        "answer": "Not by default. The live map is only visible to the organizer. If we ever enable visibility between friends, it will be 100% opt-in and only during active rides."
+        "answer": "Only if you allow it. You can share your approximate location (not exact) with friends you choose. This feature is optional and always controlled by you."
       }
     }
   },
@@ -220,7 +261,6 @@
   "footer": {
     "terms": "Terms",
     "privacy": "Privacy",
-    "contact": "Contact",
-    "disclaimer": "ConvoyHub does not provide turn-by-turn navigation; use Google Maps for directions."
+    "contact": "Contact"
   }
 }
