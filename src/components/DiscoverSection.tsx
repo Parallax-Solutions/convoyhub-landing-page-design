@@ -156,14 +156,16 @@ const DiscoverSection = () => {
                     </div>
                   </div>
 
-                  {/* Riders on route */}
+                  {/* Convoy riders on route - avatars showing who's riding */}
                   <motion.div 
-                    className="absolute left-[115px] top-[65px] z-20"
-                    animate={{ x: [0, 5, 0], y: [0, -3, 0] }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                    className="absolute left-[115px] top-[60px] z-20"
+                    animate={{ x: [0, 8, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    <div className="flex -space-x-1">
-                      <div className="w-5 h-5 bg-primary rounded-full border border-white shadow text-[8px] text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div className="flex -space-x-1.5">
+                      <div className="w-6 h-6 bg-trust rounded-full border-2 border-white shadow-md text-[8px] text-trust-foreground flex items-center justify-center font-bold">CM</div>
+                      <div className="w-6 h-6 bg-accent rounded-full border-2 border-white shadow-md text-[8px] text-accent-foreground flex items-center justify-center font-bold">AR</div>
+                      <div className="w-6 h-6 bg-primary rounded-full border-2 border-white shadow-md text-[8px] text-primary-foreground flex items-center justify-center font-bold">+2</div>
                     </div>
                   </motion.div>
                 </div>
