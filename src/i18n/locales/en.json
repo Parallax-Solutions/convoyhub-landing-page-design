@@ -48,6 +48,53 @@
       "description": "Visible to all participants. The organizer has Control Tower with advanced tools."
     }
   },
+  "riderProfile": {
+    "title": "Your Rider profile and bikes",
+    "subtitle": "Add multiple bikes, choose your 'active bike' to automatically validate compatibility, and build a real reputation based on shared rides.",
+    "screens": {
+      "profile": "Rider Profile",
+      "motorcycles": "My bikes",
+      "compatibility": "Compatibility and alerts"
+    },
+    "ridingStyle": {
+      "chill": "Chill",
+      "medium": "Medium pace",
+      "fast": "Fast"
+    },
+    "stats": {
+      "rides": "Rides",
+      "motos": "Bikes",
+      "reputation": "Reputation"
+    },
+    "badges": {
+      "title": "Badges",
+      "punctual": "Punctual",
+      "organizer": "Trusted organizer",
+      "verified": "Ride verified"
+    },
+    "myMotos": "My bikes",
+    "addMoto": "Add",
+    "activeMoto": "Active",
+    "motoTip": "Your active bike is used to validate each ride's requirements.",
+    "rideDetails": "Ride details",
+    "compatibility": {
+      "compatible": "Compatible with your active bike",
+      "notCompatible": "Not compatible",
+      "yourMoto": "Your bike",
+      "requires": "Requires"
+    },
+    "alerts": {
+      "title": "Alerts during the ride",
+      "help": "Request help",
+      "incident": "Report incident",
+      "description": "Riders can send alerts to the organizer and the group during the ride."
+    },
+    "features": {
+      "multipleMotos": "Multiple bikes: save your complete garage.",
+      "activeBike": "Active bike: validates requirements automatically.",
+      "realReputation": "Real reputation: only from shared rides."
+    }
+  },
   "howItWorks": {
     "title": "How it works",
     "subtitle": "From idea to route in minutes. No hassle.",
@@ -80,7 +127,8 @@
     "nextRides": "Upcoming rides",
     "seeAll": "See all",
     "friendsFilter": "My friends going",
-    "friendsGoing": "{{name}} + {{count}} friends going"
+    "friendsGoing": "{{name}} + {{count}} friends going",
+    "compatibleFilter": "Compatible with my bike"
   },
   "friends": {
     "title": "Ride with friends",
@@ -214,8 +262,12 @@
         "answer": "Your location is only shared during the event and with your explicit consent. It auto-turns off when finished and you always have a visible 'Stop sharing' button. Outside active rides, there's no tracking. Ever."
       },
       "multipleMotos": {
-        "question": "Can I have multiple bikes?",
-        "answer": "Yes. Add as many as you want and select the active one for each ride. This helps validate compatibility."
+        "question": "Can I register more than one bike?",
+        "answer": "Yes. Add as many as you want to your garage and select the 'active bike' for each ride. This allows automatic validation of whether you meet each event's requirements."
+      },
+      "compatibility": {
+        "question": "How does ConvoyHub decide if a ride is compatible with me?",
+        "answer": "Each ride can have requirements for minimum displacement, bike type (ADV, Sport, Naked, etc.), or specific brand. ConvoyHub compares these requirements with your active bike and shows you if you're compatible before you sign up."
       },
       "publicPrivate": {
         "question": "Are there public and private rides?",
