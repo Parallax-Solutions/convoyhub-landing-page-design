@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { UserPlus, Check, MessageCircle, Users, Send, Search, Star, Eye, Heart } from 'lucide-react';
+import { UserPlus, Check, MessageCircle, Users, Send, Search, Star, Eye, Heart, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FriendsSection = () => {
@@ -12,6 +12,7 @@ const FriendsSection = () => {
     { key: 'discoverFriends', icon: Search },
     { key: 'trustSignal', icon: Heart },
     { key: 'favorites', icon: Star },
+    { key: 'seeOnMap', icon: MapPin },
     { key: 'myGroup', icon: Eye, comingSoon: true },
   ];
 

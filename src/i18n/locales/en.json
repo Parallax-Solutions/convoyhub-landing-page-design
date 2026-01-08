@@ -113,6 +113,10 @@
         "title": "Favorites",
         "description": "Mark frequent friends to invite them instantly."
       },
+      "seeOnMap": {
+        "title": "See friends on map",
+        "description": "Approximate location, not exact. Only if they allow it, only during rides."
+      },
       "myGroup": {
         "title": "My group during ride",
         "description": "See only your friends or their status during the event.",
